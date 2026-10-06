@@ -39,6 +39,8 @@
         "constitutive"
       ],
       "bearer": "Who is governed (assistant, OpenAI, developer, user, platform...).",
+      "regulated_agent": "Whose behaviour the norm ultimately shapes. Usually the assistant, even where OpenAI is the bearer of a commitment about its models; OpenAI where the norm constrains OpenAI's own rule-making or operations.",
+      "rationale": "Verbatim reason or purpose clause the text gives for the norm (because/since/to.../trusting that...). Empty if none is stated.",
       "beneficiary": "Whose interests or claims it protects (users, developers, third parties, OpenAI, humanity).",
       "target": [
         "output",
@@ -205,6 +207,7 @@
       "secondary_label": null,
       "normative_force": "valued",
       "bearer": "OpenAI",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "users",
         "developers",
@@ -221,6 +224,7 @@
       "temporal_markers": [],
       "satisfaction": "graded",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -267,6 +271,7 @@
       "secondary_label": null,
       "normative_force": "valued",
       "bearer": "OpenAI",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "developers",
         "users"
@@ -282,6 +287,7 @@
       "temporal_markers": [],
       "satisfaction": "graded",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "need to"
@@ -322,6 +328,7 @@
       "secondary_label": null,
       "normative_force": "valued",
       "bearer": "OpenAI",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "users",
         "third parties"
@@ -337,6 +344,7 @@
       "temporal_markers": [],
       "satisfaction": "graded",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "need to"
@@ -377,6 +385,7 @@
       "secondary_label": null,
       "normative_force": "valued",
       "bearer": "OpenAI",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "OpenAI"
       ],
@@ -391,6 +400,7 @@
       "temporal_markers": [],
       "satisfaction": "graded",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "need to"
@@ -431,6 +441,7 @@
       "secondary_label": null,
       "normative_force": "required",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -443,6 +454,9 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [
+        "These goals can sometimes conflict"
+      ],
       "modal_markers": {
         "deontic": [],
         "frequency": [
@@ -491,6 +505,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "OpenAI",
+      "regulated_agent": "OpenAI",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -506,6 +521,7 @@
       ],
       "satisfaction": "graded",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -537,6 +553,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "OpenAI",
+      "regulated_agent": "users and developers",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -549,6 +566,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should"
@@ -580,6 +598,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "OpenAI",
+      "regulated_agent": "OpenAI",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -594,6 +613,7 @@
       ],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -623,6 +643,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -635,6 +656,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -669,6 +691,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -681,6 +704,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should"
@@ -720,6 +744,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -732,6 +757,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -763,6 +789,7 @@
       "secondary_label": null,
       "normative_force": "valued",
       "bearer": "OpenAI",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "humanity"
       ],
@@ -777,6 +804,7 @@
       "temporal_markers": [],
       "satisfaction": "judgment",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -806,6 +834,7 @@
       "secondary_label": null,
       "normative_force": "required",
       "bearer": "OpenAI",
+      "regulated_agent": "OpenAI",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -818,6 +847,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "committed to"
@@ -862,6 +892,7 @@
       "secondary_label": null,
       "normative_force": "prohibited",
       "bearer": "OpenAI and the assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "humanity",
         "third parties"
@@ -877,6 +908,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should"
@@ -915,6 +947,7 @@
       "secondary_label": "Oversight",
       "normative_force": "valued",
       "bearer": "OpenAI",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "humanity"
       ],
@@ -929,6 +962,7 @@
       "temporal_markers": [],
       "satisfaction": "judgment",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should"
@@ -969,6 +1003,7 @@
       "secondary_label": null,
       "normative_force": "prohibited",
       "bearer": "OpenAI",
+      "regulated_agent": "OpenAI",
       "beneficiary": [
         "humanity"
       ],
@@ -983,6 +1018,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "will not allow"
@@ -1019,6 +1055,7 @@
       "secondary_label": null,
       "normative_force": "valued",
       "bearer": "OpenAI",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "users"
       ],
@@ -1033,6 +1070,7 @@
       "temporal_markers": [],
       "satisfaction": "judgment",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "committed to"
@@ -1069,6 +1107,7 @@
       "secondary_label": null,
       "normative_force": "required",
       "bearer": "OpenAI",
+      "regulated_agent": "OpenAI",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -1081,6 +1120,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "commit"
@@ -1129,6 +1169,7 @@
       "secondary_label": null,
       "normative_force": "valued",
       "bearer": "OpenAI",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "users"
       ],
@@ -1143,6 +1184,7 @@
       "temporal_markers": [],
       "satisfaction": "graded",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should"
@@ -1179,6 +1221,7 @@
       "secondary_label": "Epistemic",
       "normative_force": "valued",
       "bearer": "OpenAI",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "users"
       ],
@@ -1193,6 +1236,7 @@
       "temporal_markers": [],
       "satisfaction": "graded",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should"
@@ -1233,6 +1277,7 @@
       "secondary_label": null,
       "normative_force": "required",
       "bearer": "OpenAI",
+      "regulated_agent": "OpenAI",
       "beneficiary": [
         "users"
       ],
@@ -1249,6 +1294,7 @@
       "temporal_markers": [],
       "satisfaction": "judgment",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "committing to"
@@ -1287,6 +1333,7 @@
       "secondary_label": null,
       "normative_force": "prohibited",
       "bearer": "OpenAI and the assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -1301,6 +1348,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should"
@@ -1342,6 +1390,7 @@
       "secondary_label": null,
       "normative_force": "recommended",
       "bearer": "developers and organization administrators",
+      "regulated_agent": "developers and organization administrators",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -1356,6 +1405,9 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [
+        "as it may not make sense in all cases"
+      ],
       "modal_markers": {
         "deontic": [
           "encourage",
@@ -1398,6 +1450,7 @@
       "secondary_label": null,
       "normative_force": "required",
       "bearer": "OpenAI",
+      "regulated_agent": "OpenAI",
       "beneficiary": [
         "users"
       ],
@@ -1412,6 +1465,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "can"
@@ -1450,6 +1504,7 @@
       "secondary_label": null,
       "normative_force": "valued",
       "bearer": "OpenAI",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "users",
         "developers"
@@ -1467,6 +1522,9 @@
       "temporal_markers": [],
       "satisfaction": "graded",
       "epistemic_conditions": [],
+      "rationale": [
+        "The AI assistant is fundamentally a tool designed to empower users and developers."
+      ],
       "modal_markers": {
         "deontic": [
           "aim to"
@@ -1502,6 +1560,7 @@
       "secondary_label": null,
       "normative_force": "valued",
       "bearer": "OpenAI",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "users",
         "third parties"
@@ -1517,6 +1576,9 @@
       "temporal_markers": [],
       "satisfaction": "graded",
       "epistemic_conditions": [],
+      "rationale": [
+        "Like any system that interacts with hundreds of millions of users, AI systems also carry potential risks for harm."
+      ],
       "modal_markers": {
         "deontic": [],
         "frequency": [
@@ -1550,6 +1612,7 @@
       "secondary_label": "Authority",
       "normative_force": "constitutive",
       "bearer": "OpenAI",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -1562,6 +1625,9 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [
+        "These are defaults that we believe are helpful in many cases, but realize that they will not work for all users and contexts."
+      ],
       "modal_markers": {
         "deontic": [
           "can"
@@ -1604,6 +1670,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "outcome",
       "activation": {
@@ -1616,6 +1683,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -1652,6 +1720,7 @@
       "secondary_label": null,
       "normative_force": "required",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "action",
       "activation": {
@@ -1664,6 +1733,9 @@
       "temporal_markers": [],
       "satisfaction": "judgment",
       "epistemic_conditions": [],
+      "rationale": [
+        "To mitigate these risks"
+      ],
       "modal_markers": {
         "deontic": [
           "should"
@@ -1705,6 +1777,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "outcome",
       "activation": {
@@ -1717,6 +1790,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -1754,6 +1828,7 @@
       "secondary_label": "Epistemic",
       "normative_force": "recommended",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "users"
       ],
@@ -1768,6 +1843,7 @@
       "temporal_markers": [],
       "satisfaction": "graded",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -1809,6 +1885,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "outcome",
       "activation": {
@@ -1821,6 +1898,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -1857,6 +1935,7 @@
       "secondary_label": "Priority",
       "normative_force": "required",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "users",
         "developers"
@@ -1874,6 +1953,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should",
@@ -1920,6 +2000,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "OpenAI",
+      "regulated_agent": "OpenAI",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -1932,6 +2013,9 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [
+        "While our overarching goals provide a directional sense of desired behavior, they are too broad to dictate specific actions in complex scenarios where the goals might conflict."
+      ],
       "modal_markers": {
         "deontic": [
           "aim to"
@@ -1963,6 +2047,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "OpenAI",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -1975,6 +2060,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -2009,6 +2095,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -2021,6 +2108,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -2063,6 +2151,7 @@
       "secondary_label": null,
       "normative_force": "valued",
       "bearer": "OpenAI",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "users",
         "developers"
@@ -2078,6 +2167,7 @@
       "temporal_markers": [],
       "satisfaction": "graded",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -2112,6 +2202,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -2124,6 +2215,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "cannot"
@@ -2172,6 +2264,7 @@
       "secondary_label": null,
       "normative_force": "prohibited",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "humanity",
         "third parties"
@@ -2187,6 +2280,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "requiring",
@@ -2228,6 +2322,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "OpenAI",
+      "regulated_agent": "OpenAI",
       "beneficiary": [
         "developers",
         "users"
@@ -2246,6 +2341,9 @@
       "satisfaction": "judgment",
       "epistemic_conditions": [
         "when we believe they are necessary"
+      ],
+      "rationale": [
+        "We expect AI to become a foundational technology for society, analogous to basic internet infrastructure."
       ],
       "modal_markers": {
         "deontic": [],
@@ -2278,6 +2376,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -2290,6 +2389,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "cannot"
@@ -2334,6 +2434,7 @@
       "secondary_label": "Default",
       "normative_force": "required",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "action",
       "activation": {
@@ -2348,6 +2449,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should"
@@ -2379,6 +2481,7 @@
       "secondary_label": "Interpretation",
       "normative_force": "constitutive",
       "bearer": "OpenAI",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -2391,6 +2494,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "can"
@@ -2422,6 +2526,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -2434,6 +2539,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "can",
@@ -2466,6 +2572,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -2478,6 +2585,9 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [
+        "there can be reasons to vary rules based on the surface in which the model is served, as well as characteristics of the user (e.g., age)"
+      ],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -2507,6 +2617,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "OpenAI",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -2519,6 +2630,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "can only"
@@ -2552,6 +2664,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -2564,6 +2677,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -2598,6 +2712,7 @@
       "secondary_label": "Priority",
       "normative_force": "required",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "developers"
       ],
@@ -2614,6 +2729,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should",
@@ -2655,6 +2771,7 @@
       "secondary_label": null,
       "normative_force": "valued",
       "bearer": "OpenAI",
+      "regulated_agent": "OpenAI",
       "beneficiary": [
         "developers"
       ],
@@ -2669,6 +2786,9 @@
       "temporal_markers": [],
       "satisfaction": "graded",
       "epistemic_conditions": [],
+      "rationale": [
+        "trusting that those who impose overly restrictive rules on end users will be less competitive in an open market"
+      ],
       "modal_markers": {
         "deontic": [
           "aim to"
@@ -2702,6 +2822,7 @@
       "secondary_label": "Authority",
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -2714,6 +2835,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "can"
@@ -2752,6 +2874,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -2764,6 +2887,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -2798,6 +2922,7 @@
       "secondary_label": "Priority",
       "normative_force": "required",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "users"
       ],
@@ -2814,6 +2939,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should",
@@ -2851,6 +2977,7 @@
       "secondary_label": "Authority",
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -2863,6 +2990,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "can"
@@ -2901,6 +3029,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -2913,6 +3042,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "can"
@@ -2951,6 +3081,7 @@
       "secondary_label": null,
       "normative_force": "valued",
       "bearer": "OpenAI",
+      "regulated_agent": "OpenAI",
       "beneficiary": [
         "users"
       ],
@@ -2965,6 +3096,9 @@
       "temporal_markers": [],
       "satisfaction": "graded",
       "epistemic_conditions": [],
+      "rationale": [
+        "To maximally empower end users and avoid being paternalistic"
+      ],
       "modal_markers": {
         "deontic": [
           "avoid",
@@ -2997,6 +3131,7 @@
       "secondary_label": "Interpretation",
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -3009,6 +3144,7 @@
       "temporal_markers": [],
       "satisfaction": "judgment",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "can only",
@@ -3062,6 +3198,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "output",
       "activation": {
@@ -3076,6 +3213,7 @@
       "temporal_markers": [],
       "satisfaction": "judgment",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -3112,6 +3250,7 @@
       "secondary_label": null,
       "normative_force": "valued",
       "bearer": "OpenAI",
+      "regulated_agent": "OpenAI",
       "beneficiary": [
         "developers",
         "users"
@@ -3127,6 +3266,9 @@
       "temporal_markers": [],
       "satisfaction": "graded",
       "epistemic_conditions": [],
+      "rationale": [
+        "In practice, however, it's impractical for the model to do this on the fly and makes model behavior less predictable for people."
+      ],
       "modal_markers": {
         "deontic": [
           "can"
@@ -3163,6 +3305,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -3175,6 +3318,7 @@
       "temporal_markers": [],
       "satisfaction": "judgment",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -3204,6 +3348,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "OpenAI",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -3216,6 +3361,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -3247,6 +3393,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -3259,6 +3406,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [
@@ -3291,6 +3439,7 @@
       "secondary_label": "Interpretation",
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -3303,6 +3452,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -3336,6 +3486,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -3348,6 +3499,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -3377,6 +3529,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -3391,6 +3544,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -3444,6 +3598,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -3456,6 +3611,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -3490,6 +3646,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -3502,6 +3659,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -3536,6 +3694,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -3548,6 +3707,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -3582,6 +3742,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -3594,6 +3755,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -3628,6 +3790,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -3640,6 +3803,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -3674,6 +3838,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -3686,6 +3851,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -3715,6 +3881,7 @@
       "secondary_label": "Authority",
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -3727,6 +3894,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should"
@@ -3762,6 +3930,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "OpenAI",
+      "regulated_agent": "OpenAI",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -3774,6 +3943,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -3803,6 +3973,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -3815,6 +3986,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -3846,6 +4018,7 @@
       "secondary_label": null,
       "normative_force": "permitted",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "action",
       "activation": {
@@ -3858,6 +4031,7 @@
       "temporal_markers": [],
       "satisfaction": "judgment",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [
@@ -3892,6 +4066,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -3904,6 +4079,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should"
@@ -3935,6 +4111,7 @@
       "secondary_label": null,
       "normative_force": "required",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "users",
         "third parties"
@@ -3952,6 +4129,9 @@
       "temporal_markers": [],
       "satisfaction": "judgment",
       "epistemic_conditions": [],
+      "rationale": [
+        "Some tool calls may cause **side-effects** on the world which are difficult or impossible to reverse (e.g., sending an email or deleting a file)"
+      ],
       "modal_markers": {
         "deontic": [
           "should"
@@ -3990,6 +4170,7 @@
       "secondary_label": "Epistemic",
       "normative_force": "constitutive",
       "bearer": "OpenAI",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -4004,6 +4185,9 @@
       ],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [
+        "This is because chains of thought may include unaligned content (e.g., reasoning about potential answers that might violate Model Spec policies), as well as for competitive reasons."
+      ],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -4036,6 +4220,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -4050,6 +4235,7 @@
       ],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -4079,6 +4265,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -4093,6 +4280,7 @@
       ],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "required"
@@ -4126,6 +4314,7 @@
       "secondary_label": "Epistemic",
       "normative_force": "permitted",
       "bearer": "developer",
+      "regulated_agent": "developer",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -4138,6 +4327,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "can"
@@ -4171,6 +4361,7 @@
       "secondary_label": null,
       "normative_force": "permitted",
       "bearer": "OpenAI",
+      "regulated_agent": "OpenAI",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -4183,6 +4374,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "may"
@@ -4214,6 +4406,7 @@
       "secondary_label": "Epistemic",
       "normative_force": "constitutive",
       "bearer": "developer",
+      "regulated_agent": "developer",
       "beneficiary": [],
       "target": "belief",
       "activation": {
@@ -4226,6 +4419,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -4257,6 +4451,7 @@
       "secondary_label": "Authority",
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "OpenAI and developers",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -4269,6 +4464,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [
@@ -4303,6 +4499,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -4315,6 +4512,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -4344,6 +4542,7 @@
       "secondary_label": "Definition",
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "belief",
       "activation": {
@@ -4356,6 +4555,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [
@@ -4392,6 +4592,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -4408,6 +4609,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -4437,6 +4639,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -4451,6 +4654,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [
@@ -4482,6 +4686,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "belief",
       "activation": {
@@ -4494,6 +4699,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -4526,6 +4732,7 @@
       "secondary_label": "Priority",
       "normative_force": "required",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -4538,6 +4745,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "must"
@@ -4578,6 +4786,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -4590,6 +4799,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "can"
@@ -4626,6 +4836,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -4640,6 +4851,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -4676,6 +4888,7 @@
       "secondary_label": null,
       "normative_force": "required",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "action",
       "activation": {
@@ -4688,6 +4901,7 @@
       "temporal_markers": [],
       "satisfaction": "graded",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "must"
@@ -4730,6 +4944,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -4746,6 +4961,7 @@
       ],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -4783,6 +4999,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -4795,6 +5012,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -4829,6 +5047,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -4841,6 +5060,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -4879,6 +5099,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -4891,6 +5112,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -4920,6 +5142,7 @@
       "secondary_label": null,
       "normative_force": "required",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "action",
       "activation": {
@@ -4935,6 +5158,7 @@
       ],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "must"
@@ -4971,6 +5195,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -4983,6 +5208,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -5012,6 +5238,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -5024,6 +5251,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -5053,6 +5281,7 @@
       "secondary_label": null,
       "normative_force": "required",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -5067,6 +5296,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should"
@@ -5105,6 +5335,7 @@
       "secondary_label": "Priority",
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -5122,6 +5353,7 @@
       "epistemic_conditions": [
         "suspected to be mistaken"
       ],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -5166,6 +5398,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -5178,6 +5411,7 @@
       "temporal_markers": [],
       "satisfaction": "judgment",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -5216,6 +5450,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -5228,6 +5463,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -5275,6 +5511,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -5289,6 +5526,7 @@
       ],
       "satisfaction": "judgment",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -5329,6 +5567,7 @@
       "secondary_label": "Interpretation",
       "normative_force": "required",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "belief",
       "activation": {
@@ -5348,6 +5587,7 @@
         "when plausible",
         "taking into account common sense cues including the amount of time between messages"
       ],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should"
@@ -5391,6 +5631,7 @@
       "secondary_label": null,
       "normative_force": "required",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "action",
       "activation": {
@@ -5403,6 +5644,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should"
@@ -5436,6 +5678,7 @@
       "secondary_label": null,
       "normative_force": "prohibited",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "action",
       "activation": {
@@ -5450,6 +5693,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should"
@@ -5485,6 +5729,7 @@
       "secondary_label": "Epistemic",
       "normative_force": "required",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "users",
         "developers"
@@ -5506,6 +5751,7 @@
       ],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should"
@@ -5542,6 +5788,7 @@
       "secondary_label": null,
       "normative_force": "permitted",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "action",
       "activation": {
@@ -5556,6 +5803,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -5585,6 +5833,7 @@
       "secondary_label": "Interpretation",
       "normative_force": "prohibited",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "belief",
       "activation": {
@@ -5599,6 +5848,7 @@
       ],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should not"
@@ -5641,6 +5891,7 @@
       "secondary_label": "Interpretation",
       "normative_force": "prohibited",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "belief",
       "activation": {
@@ -5655,6 +5906,7 @@
       ],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -5694,6 +5946,7 @@
       "secondary_label": null,
       "normative_force": "prohibited",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "action",
       "activation": {
@@ -5706,6 +5959,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should"
@@ -5746,6 +6000,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "output",
       "activation": {
@@ -5758,6 +6013,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "cannot"
@@ -5798,6 +6054,7 @@
       "secondary_label": null,
       "normative_force": "required",
       "bearer": "OpenAI and the assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "disposition",
       "activation": {
@@ -5810,6 +6067,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should"
@@ -5846,6 +6104,7 @@
       "secondary_label": null,
       "normative_force": "required",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "belief",
       "activation": {
@@ -5858,6 +6117,7 @@
       "temporal_markers": [],
       "satisfaction": "judgment",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should"
@@ -5900,6 +6160,7 @@
       "secondary_label": null,
       "normative_force": "required",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "developers",
         "users",
@@ -5917,6 +6178,7 @@
       "temporal_markers": [],
       "satisfaction": "judgment",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should"
@@ -5955,6 +6217,7 @@
       "secondary_label": null,
       "normative_force": "required",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "users"
       ],
@@ -5971,6 +6234,7 @@
       ],
       "satisfaction": "judgment",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should"
@@ -6011,6 +6275,7 @@
       "secondary_label": null,
       "normative_force": "prohibited",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "action",
       "activation": {
@@ -6023,6 +6288,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should"
@@ -6079,6 +6345,7 @@
       "secondary_label": null,
       "normative_force": "permitted",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "output",
       "activation": {
@@ -6093,6 +6360,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "can"
@@ -6129,6 +6397,7 @@
       "secondary_label": null,
       "normative_force": "prohibited",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "third parties",
         "users"
@@ -6144,6 +6413,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should"
@@ -6182,6 +6452,7 @@
       "secondary_label": null,
       "normative_force": "required",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "belief",
       "activation": {
@@ -6194,6 +6465,7 @@
       "temporal_markers": [],
       "satisfaction": "judgment",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should"
@@ -6232,6 +6504,7 @@
       "secondary_label": null,
       "normative_force": "prohibited",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "action",
       "activation": {
@@ -6246,6 +6519,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should"
@@ -6287,6 +6561,7 @@
       "secondary_label": null,
       "normative_force": "required",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "users"
       ],
@@ -6303,6 +6578,7 @@
       "temporal_markers": [],
       "satisfaction": "judgment",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should"
@@ -6341,6 +6617,7 @@
       "secondary_label": null,
       "normative_force": "required",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "output",
       "activation": {
@@ -6357,6 +6634,7 @@
       "epistemic_conditions": [
         "If the user's intent is unclear"
       ],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should"
@@ -6401,6 +6679,7 @@
       "secondary_label": "Default",
       "normative_force": "required",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "users",
         "third parties"
@@ -6420,6 +6699,7 @@
       "epistemic_conditions": [
         "where user goals or values are unclear"
       ],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should"
@@ -6463,6 +6743,7 @@
       "secondary_label": "Priority",
       "normative_force": "required",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "belief",
       "activation": {
@@ -6475,6 +6756,7 @@
       "temporal_markers": [],
       "satisfaction": "judgment",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should"
@@ -6512,6 +6794,7 @@
       "secondary_label": null,
       "normative_force": "required",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "action",
       "activation": {
@@ -6532,6 +6815,7 @@
         "the user may have made a mistake",
         "provenance of instructions is unclear"
       ],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should"
@@ -6570,6 +6854,7 @@
       "secondary_label": "Oversight",
       "normative_force": "required",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "users"
       ],
@@ -6588,6 +6873,7 @@
       ],
       "satisfaction": "comparative",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should"
@@ -6637,6 +6923,7 @@
       "secondary_label": null,
       "normative_force": "prohibited",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "action",
       "activation": {
@@ -6649,6 +6936,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -6683,6 +6971,7 @@
       "secondary_label": null,
       "normative_force": "required",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "action",
       "activation": {
@@ -6695,6 +6984,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -6729,6 +7019,7 @@
       "secondary_label": "Disposition",
       "normative_force": "prohibited",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "disposition",
       "activation": {
@@ -6741,6 +7032,9 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [
+        "Thinking of the assistant as a conscientious employee reporting to the user or developer"
+      ],
       "modal_markers": {
         "deontic": [
           "should not"
@@ -6772,6 +7066,7 @@
       "secondary_label": null,
       "normative_force": "permitted",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "users"
       ],
@@ -6790,6 +7085,7 @@
       "epistemic_conditions": [
         "as reasonably inferred from the context"
       ],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "may"
@@ -6823,6 +7119,7 @@
       "secondary_label": null,
       "normative_force": "required",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "users"
       ],
@@ -6837,6 +7134,7 @@
       "temporal_markers": [],
       "satisfaction": "judgment",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -6870,6 +7168,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "output",
       "activation": {
@@ -6882,6 +7181,7 @@
       "temporal_markers": [],
       "satisfaction": "judgment",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -6916,6 +7216,7 @@
       "secondary_label": null,
       "normative_force": "required",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "belief",
       "activation": {
@@ -6928,6 +7229,7 @@
       "temporal_markers": [],
       "satisfaction": "judgment",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -6968,6 +7270,7 @@
       "secondary_label": null,
       "normative_force": "required",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "output",
       "activation": {
@@ -6980,6 +7283,7 @@
       "temporal_markers": [],
       "satisfaction": "judgment",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -7016,6 +7320,7 @@
       "secondary_label": "Prohibition",
       "normative_force": "prohibited",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "outcome",
       "activation": {
@@ -7031,6 +7336,7 @@
       ],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "may only"
@@ -7083,6 +7389,7 @@
       "secondary_label": null,
       "normative_force": "prohibited",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "disposition",
       "activation": {
@@ -7095,6 +7402,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "must not"
@@ -7156,6 +7464,7 @@
       "secondary_label": null,
       "normative_force": "prohibited",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "users"
       ],
@@ -7172,6 +7481,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -7208,6 +7518,7 @@
       "secondary_label": null,
       "normative_force": "prohibited",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "users"
       ],
@@ -7222,6 +7533,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -7266,6 +7578,7 @@
       "secondary_label": "Oversight",
       "normative_force": "prohibited",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "humanity"
       ],
@@ -7280,6 +7593,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -7320,6 +7634,7 @@
       "secondary_label": null,
       "normative_force": "prohibited",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "action",
       "activation": {
@@ -7332,6 +7647,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -7372,6 +7688,7 @@
       "secondary_label": null,
       "normative_force": "permitted",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "belief",
       "activation": {
@@ -7386,6 +7703,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "may only"
@@ -7425,6 +7743,7 @@
       "secondary_label": null,
       "normative_force": "prohibited",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "action",
       "activation": {
@@ -7437,6 +7756,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should not"
@@ -7473,6 +7793,7 @@
       "secondary_label": null,
       "normative_force": "permitted",
       "bearer": "OpenAI",
+      "regulated_agent": "OpenAI",
       "beneficiary": [
         "third parties",
         "humanity"
@@ -7493,6 +7814,7 @@
       ],
       "satisfaction": "judgment",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "may"
@@ -7524,6 +7846,7 @@
       "secondary_label": null,
       "normative_force": "prohibited",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "output",
       "activation": {
@@ -7536,6 +7859,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -7572,6 +7896,7 @@
       "secondary_label": null,
       "normative_force": "permitted",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "output",
       "activation": {
@@ -7584,6 +7909,7 @@
       "temporal_markers": [],
       "satisfaction": "judgment",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -7616,6 +7942,7 @@
       "secondary_label": null,
       "normative_force": "prohibited",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "users"
       ],
@@ -7632,6 +7959,9 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [
+        "given the potential conflict of interest"
+      ],
       "modal_markers": {
         "deontic": [
           "should",
@@ -7669,6 +7999,7 @@
       "secondary_label": "Authority",
       "normative_force": "permitted",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "action",
       "activation": {
@@ -7681,6 +8012,9 @@
       "temporal_markers": [],
       "satisfaction": "judgment",
       "epistemic_conditions": [],
+      "rationale": [
+        "Requiring explicit confirmation for every step would often be impractical"
+      ],
       "modal_markers": {
         "deontic": [
           "must"
@@ -7720,6 +8054,7 @@
       "secondary_label": "Authority",
       "normative_force": "required",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "users"
       ],
@@ -7734,6 +8069,9 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [
+        "To prevent costly misunderstandings or surprises"
+      ],
       "modal_markers": {
         "deontic": [
           "require",
@@ -7775,6 +8113,7 @@
       "secondary_label": "Authority",
       "normative_force": "constitutive",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -7787,6 +8126,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "may",
@@ -7836,6 +8176,7 @@
       "secondary_label": null,
       "normative_force": "constitutive",
       "bearer": "user and developer",
+      "regulated_agent": "user and developer",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -7848,6 +8189,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -7880,6 +8222,7 @@
       "secondary_label": null,
       "normative_force": "required",
       "bearer": "assistant and user",
+      "regulated_agent": "assistant and user",
       "beneficiary": [
         "users"
       ],
@@ -7894,6 +8237,9 @@
       "temporal_markers": [],
       "satisfaction": "graded",
       "epistemic_conditions": [],
+      "rationale": [
+        "to reduce surprises and build trust"
+      ],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -7928,6 +8274,7 @@
       "secondary_label": "Epistemic",
       "normative_force": "required",
       "bearer": "assistant and user",
+      "regulated_agent": "assistant and user",
       "beneficiary": [
         "users"
       ],
@@ -7942,6 +8289,7 @@
       "temporal_markers": [],
       "satisfaction": "comparative",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -7976,6 +8324,7 @@
       "secondary_label": null,
       "normative_force": "required",
       "bearer": "assistant and user",
+      "regulated_agent": "assistant and user",
       "beneficiary": [
         "users"
       ],
@@ -7993,6 +8342,7 @@
       ],
       "satisfaction": "graded",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -8031,6 +8381,7 @@
       "secondary_label": null,
       "normative_force": "prohibited",
       "bearer": "assistant and user",
+      "regulated_agent": "assistant and user",
       "beneficiary": [
         "users"
       ],
@@ -8045,6 +8396,9 @@
       "temporal_markers": [],
       "satisfaction": "comparative",
       "epistemic_conditions": [],
+      "rationale": [
+        "which could habituate the user to automatically confirming all requests"
+      ],
       "modal_markers": {
         "deontic": [
           "should"
@@ -8083,6 +8437,7 @@
       "secondary_label": "Authority",
       "normative_force": "required",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "action",
       "activation": {
@@ -8098,6 +8453,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "must"
@@ -8139,6 +8495,7 @@
       "secondary_label": null,
       "normative_force": "prohibited",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "action",
       "activation": {
@@ -8153,6 +8510,7 @@
       "epistemic_conditions": [
         "seems to be in the user's best interest"
       ],
+      "rationale": [],
       "modal_markers": {
         "deontic": [],
         "frequency": [],
@@ -8191,6 +8549,7 @@
       "secondary_label": null,
       "normative_force": "required",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "users"
       ],
@@ -8207,6 +8566,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "should"
@@ -8238,6 +8598,7 @@
       "secondary_label": null,
       "normative_force": "recommended",
       "bearer": "platform (OpenAI)",
+      "regulated_agent": "OpenAI",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -8250,6 +8611,9 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [
+        "to facilitate validation, enforcement, and auditing by the platform"
+      ],
       "modal_markers": {
         "deontic": [
           "should"
@@ -8281,6 +8645,7 @@
       "secondary_label": null,
       "normative_force": "required",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "rule",
       "activation": {
@@ -8296,6 +8661,7 @@
       ],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "must"
@@ -8329,6 +8695,7 @@
       "secondary_label": null,
       "normative_force": "prohibited",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [
         "third parties",
         "humanity"
@@ -8346,6 +8713,7 @@
       "temporal_markers": [],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "prohibited"
@@ -8388,6 +8756,7 @@
       "secondary_label": null,
       "normative_force": "required",
       "bearer": "assistant",
+      "regulated_agent": "assistant",
       "beneficiary": [],
       "target": "outcome",
       "activation": {
@@ -8405,6 +8774,7 @@
       ],
       "satisfaction": "binary",
       "epistemic_conditions": [],
+      "rationale": [],
       "modal_markers": {
         "deontic": [
           "must"

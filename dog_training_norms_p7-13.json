@@ -96,6 +96,7 @@
       "rationale": "Verbatim reason the text gives for the norm.",
       "pdf_page / printed_page": "PDF page index and the page number printed on the page (PDF page − 2)."
     },
+    "rules_status": "The 11 numbered items under 'Rules to train by' are introduced as 'tips', but are treated as binding rules: force and strength follow each rule's own wording, and the 'tips' framing doesn't weaken them. Hedges inside a rule ('usually' in rule 8) still make that rule presumptive.",
     "normative_force_added": {
       "discouraged": "Advised against but not forbidden ('not recommended', 'will not serve your training well'). Added for this document."
     },
@@ -1418,7 +1419,7 @@
       },
       "relations": [],
       "cross_refs": [],
-      "context": "States the aim behind the 11 rules. Calls them 'tips', which suggests advice rather than strict rules.",
+      "context": "States the aim behind the 11 rules. The text calls them 'tips', but they are treated as binding rules here (see metadata.rules_status).",
       "is_example": false,
       "parent_id": null,
       "split_group": null,
@@ -2044,7 +2045,7 @@
       "text": "Rough or abusive treatment will not serve your training well.",
       "label": "Prohibition",
       "secondary_label": null,
-      "normative_force": "discouraged",
+      "normative_force": "prohibited",
       "bearer": "owner",
       "regulated_agent": "owner",
       "interaction": "owner→dog",
@@ -2065,7 +2066,9 @@
       "enforcement_on_dog": null,
       "rationale": [],
       "modal_markers": {
-        "deontic": [],
+        "deontic": [
+          "prescriptive_indicative"
+        ],
         "frequency": [],
         "hedge": [],
         "restrictor": []
@@ -2077,7 +2080,7 @@
         }
       ],
       "cross_refs": [],
-      "context": "Rule 9. Advises against harsh treatment by pointing to its ineffectiveness, not by forbidding it outright.",
+      "context": "Rule 9. Treated as a binding rule like the other numbered tips: rough or abusive treatment is prohibited. The text phrases it through its ineffectiveness.",
       "is_example": false,
       "parent_id": null,
       "split_group": null,
@@ -2314,7 +2317,7 @@
         "scope": null
       },
       "exceptions": [],
-      "strength": "presumptive",
+      "strength": "absolute",
       "temporal_structure": "triggered",
       "temporal_markers": [
         "each day"
