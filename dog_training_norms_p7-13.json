@@ -1,0 +1,5633 @@
+{
+  "metadata": {
+    "source": "toy dog training copy.pdf ('Training Rex', 2006)",
+    "range": "PDF pages 7-13 (printed page numbers 5-11): Week 1 preparations, Introduction to Dog Training, Basic Dog Training Theory, reinforcement, corrections.",
+    "agents": {
+      "owner": "The trainer/owner, addressed as 'you'. Almost every norm is written to the owner.",
+      "dog": "Treated as an agent. Norms on the dog (heel position, no pulling, obey despite distractions) aren't addressed to the dog in words. The owner sets them and the dog learns them through reinforcement ('enforcement_on_dog').",
+      "others": "Family members, the veterinarian and the public appear as secondary bearers or beneficiaries."
+    },
+    "extraction_notes": [
+      "'text', 'conditions', 'exceptions', 'epistemic_conditions.text', 'rationale' and 'cross_refs' are verbatim from the PDF text, with three normalizations: whitespace and line breaks collapsed to single spaces, the typographic ligatures 'ﬂ'/'ﬁ' written as 'fl'/'fi', and the line-break hyphen restored in 'off-leash' (p. 9, extracted as 'offleash'). Curly quotes, en dashes and capitals are kept.",
+      "Page 9 is set in two columns. Rules 1-11 are extracted in reading order.",
+      "The sidebar on p. 12 ('Reread this paragraph…') is tagged document_part = 'sidebar'.",
+      "Purely factual sentences used as reasons are stored in 'rationale' on the norm they support, not as separate entries.",
+      "Mixed statements are split and share a 'split_group'."
+    ],
+    "label_taxonomy": {
+      "Goal": "Outcome to pursue, possibly with degrees of achievement.",
+      "Value": "What matters, without itself fixing an action.",
+      "Disposition": "A persistent orientation or character ideal rather than a single act.",
+      "Obligation": "A required action or state (used when no more specific functional category fits).",
+      "Prohibition": "An action or state that must not occur (used when no more specific functional category fits).",
+      "Permission": "An action the system is authorized, not merely not forbidden, to take; discretionary latitude.",
+      "Default": "A presumptive rule that stronger context can displace.",
+      "Definition": "A statement that creates the institutional setting, roles, or concepts.",
+      "Authority": "Who can create, alter, override, or delegate requirements; where authority comes from.",
+      "Priority": "How multiple applicable requirements or authorities are ordered; conflict resolution.",
+      "Interpretation": "How wording and intent should be read, especially under ambiguity.",
+      "Procedure": "A required way to reason or decide; deliberative heuristics.",
+      "Epistemic": "Requirements or facts about knowledge, truthfulness, visibility, or evidence.",
+      "Oversight": "Requirements governing correction, escalation, review, shutdown, or audit."
+    },
+    "labeling_rule": "Label = the most specific functional category (Goal, Value, Disposition, Default, Definition, Authority, Priority, Interpretation, Procedure, Epistemic, Oversight). Obligation, Prohibition and Permission are used only when nothing more specific fits. The deontic status is always recorded separately in 'normative_force'. 'secondary_label' records a second category where one clearly applies.",
+    "characteristics": {
+      "normative_force": [
+        "required",
+        "prohibited",
+        "permitted",
+        "recommended",
+        "valued",
+        "constitutive"
+      ],
+      "bearer": "Who is governed (assistant, OpenAI, developer, user, platform...).",
+      "beneficiary": "Whose interests or claims it protects (users, developers, third parties, OpenAI, humanity).",
+      "target": [
+        "output",
+        "action",
+        "outcome",
+        "belief",
+        "disposition",
+        "relationship",
+        "rule"
+      ],
+      "activation": "conditions = verbatim triggering clauses; scope = which deployments or products it is limited to (null = everywhere).",
+      "strength": {
+        "absolute": "No override stated; for root-level text, can't be overridden by any message.",
+        "presumptive": "Holds by default/typically; yields to unstated stronger considerations.",
+        "explicitly_overridable": "The text names what overrides it (unless..., can be overridden by..., subject to...).",
+        "implicitly_overridable": "Can be displaced by contextual cues without an explicit instruction (guideline level).",
+        "null": "Definitions and other non-binding statements."
+      },
+      "temporal_structure": {
+        "continuous": "Always in force.",
+        "triggered": "Activated by a condition or event.",
+        "prospective": "About future states or commitments.",
+        "post_violation": "Activated after the dog fails to comply (corrections) or after a training failure."
+      },
+      "satisfaction": {
+        "binary": "Met or not met.",
+        "graded": "Satisfied to a degree (maximize/minimize).",
+        "comparative": "Satisfied relative to alternatives (err on the side of..., most consequential...).",
+        "judgment": "Depends on contextual judgment (appropriate, plausible, consider...)."
+      },
+      "epistemic_conditions": "Verbatim clauses whose applicability depends on knowledge, belief, suspicion, or inference.",
+      "relations": {
+        "overrides/overridden_by": "",
+        "exempts/exempted_by": "",
+        "instantiates/instantiated_by": "Specific case or example of a more general norm.",
+        "authorizes/authorized_by": "",
+        "explains/explained_by": "Gives the rationale for.",
+        "depends_on/depended_on_by": "Presupposes the other.",
+        "related": "Thematic link. All relations are stored in both directions."
+      }
+    },
+    "dog_owner_fields": {
+      "bearer": "Who must act or comply: owner | dog | owner and dog | family members | other family members.",
+      "regulated_agent": "Whose behaviour the norm ultimately shapes. Often differs from the bearer, e.g. a rule addressed to the owner that is really about what the dog does.",
+      "interaction": {
+        "owner→dog": "Owner acts on or toward the dog.",
+        "owner→self": "Owner's own preparation, knowledge or conduct.",
+        "owner→third party": "Involves the vet, family or public.",
+        "dog→owner": "Dog's conduct relative to the owner (e.g. heel position, compliance)."
+      },
+      "enforcement_on_dog": "How the norm is enforced on the dog: positive_reinforcement | negative_reinforcement | combined | null (not dog-directed).",
+      "epistemic_conditions.holder": "Whose knowledge or perception the condition depends on: owner, dog, or 'owner (about dog)' for the owner's judgment of the dog's state.",
+      "rationale": "Verbatim reason the text gives for the norm.",
+      "pdf_page / printed_page": "PDF page index and the page number printed on the page (PDF page − 2)."
+    },
+    "normative_force_added": {
+      "discouraged": "Advised against but not forbidden ('not recommended', 'will not serve your training well'). Added for this document."
+    },
+    "modal_marker_lists": {
+      "deontic": [
+        "prescriptive_indicative",
+        "must",
+        "should",
+        "need to",
+        "needs to",
+        "is needed",
+        "no need",
+        "it is imperative",
+        "imperative",
+        "is important",
+        "is best",
+        "not recommended",
+        "not acceptable",
+        "unacceptable",
+        "has no place",
+        "have no place",
+        "better",
+        "can",
+        "may",
+        "don’t allow",
+        "don’t",
+        "never"
+      ],
+      "frequency": [
+        "always",
+        "never",
+        "usually",
+        "often",
+        "sometimes",
+        "occasionally",
+        "each and every time",
+        "every time",
+        "each time",
+        "at all times",
+        "each day",
+        "generally",
+        "consistently"
+      ],
+      "hedge": [
+        "chances are",
+        "better than average chance",
+        "most likely",
+        "may",
+        "can",
+        "could",
+        "appropriate",
+        "as necessary",
+        "ample",
+        "some",
+        "most dogs",
+        "a certain amount of",
+        "slightly",
+        "approximately"
+      ],
+      "restrictor": [
+        "only",
+        "exclusively",
+        "primarily",
+        "at least",
+        "no more than",
+        "a minimum of",
+        "merely",
+        "simply",
+        "nothing more and nothing less",
+        "specifically",
+        "completely",
+        "systematically"
+      ],
+      "_note": "Detected automatically and then corrected by hand. 'prescriptive_indicative' marks a required or prohibited norm stated in plain present tense with no modal word ('we rely exclusively on positive reinforcement', 'No corrections are given'). 'imperative' marks instructions in the imperative mood (most of this manual). can/may count as deontic only where they grant permission."
+    },
+    "temporal_marker_list": [
+      "before",
+      "after",
+      "during",
+      "once",
+      "as soon as",
+      "until",
+      "eventually",
+      "first",
+      "then",
+      "next",
+      "instantly",
+      "swiftly",
+      "quickly",
+      "after the fact",
+      "early stages",
+      "as training progresses",
+      "final",
+      "each day",
+      "a few hours before",
+      "at least four hours"
+    ]
+  },
+  "norms": [
+    {
+      "id": "DT001",
+      "key": "collar_best",
+      "pdf_page": 7,
+      "printed_page": 5,
+      "section": "Week 1 Preparations > Get the right equipment",
+      "document_part": "prose",
+      "text": "Collar. A flat nylon or leather collar or a half-check training collar is best.",
+      "label": "Default",
+      "secondary_label": null,
+      "normative_force": "recommended",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [
+        "dog"
+      ],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "presumptive",
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "is best"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "First equipment item. A recommended default that the next sentences show can be displaced (some owners use choke chains).",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT002",
+      "key": "halfcheck_def",
+      "pdf_page": 7,
+      "printed_page": 5,
+      "section": "Week 1 Preparations > Get the right equipment",
+      "document_part": "prose",
+      "text": "The half-check collar is part nylon fabric and part chain link.",
+      "label": "Definition",
+      "secondary_label": null,
+      "normative_force": "constitutive",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "rule",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": null,
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Defines the half-check collar.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT003",
+      "key": "choke_not_rec",
+      "pdf_page": 7,
+      "printed_page": 5,
+      "section": "Week 1 Preparations > Get the right equipment",
+      "document_part": "prose",
+      "text": "A choke chain is not recommended as this type of collar is implicated in doing damage to the esophagus. For this reason and because these collars have the ability to choke a dog to death, many consider them dangerous and inhumane.",
+      "label": "Prohibition",
+      "secondary_label": "Value",
+      "normative_force": "discouraged",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [
+        "dog"
+      ],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "presumptive",
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [
+        "this type of collar is implicated in doing damage to the esophagus",
+        "these collars have the ability to choke a dog to death"
+      ],
+      "modal_markers": {
+        "deontic": [
+          "not recommended"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Advises against choke chains because of injury and welfare risk. 'Not recommended' rather than forbidden.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT004",
+      "key": "choke_some_use",
+      "pdf_page": 7,
+      "printed_page": 5,
+      "section": "Week 1 Preparations > Get the right equipment",
+      "document_part": "prose",
+      "text": "Although people do not intend to harm their pets, these collars are very easy to misuse. Despite the drawbacks, some people will decide to use this type of collar for training.",
+      "label": "Permission",
+      "secondary_label": null,
+      "normative_force": "permitted",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [
+        "dog"
+      ],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": null,
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [],
+        "frequency": [],
+        "hedge": [
+          "some"
+        ],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT005",
+          "relation": "depended_on_by"
+        },
+        {
+          "ref": "DT006",
+          "relation": "depended_on_by"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Acknowledges that owners keep discretion to use a choke chain despite the advice.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "borderline"
+    },
+    {
+      "id": "DT005",
+      "key": "choke_understand",
+      "pdf_page": 7,
+      "printed_page": 5,
+      "section": "Week 1 Preparations > Get the right equipment",
+      "document_part": "prose",
+      "text": "If you do, it is imperative to understand how to use it properly – and for this reason, this manual includes a discussion of the correct placement and the best technique for using the choke collar (see page 25).",
+      "label": "Epistemic",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→self",
+      "beneficiary": [
+        "dog"
+      ],
+      "target": "belief",
+      "activation": {
+        "conditions": [
+          "If you do"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "triggered",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "it is imperative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT004",
+          "relation": "depends_on"
+        }
+      ],
+      "cross_refs": [
+        "see page 25"
+      ],
+      "context": "Knowledge requirement that applies if the owner chooses a choke chain.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT006",
+      "key": "choke_never_left",
+      "pdf_page": 7,
+      "printed_page": 5,
+      "section": "Week 1 Preparations > Get the right equipment",
+      "document_part": "prose",
+      "text": "However, it bears repeating that this is a dangerous collar. It should never be left on the dog.",
+      "label": "Prohibition",
+      "secondary_label": null,
+      "normative_force": "prohibited",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [
+        "dog"
+      ],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "should"
+        ],
+        "frequency": [
+          "never"
+        ],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT004",
+          "relation": "depends_on"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Absolute safety rule for choke chains.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": "DT006",
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT007",
+      "key": "choke_take_off",
+      "pdf_page": 7,
+      "printed_page": 5,
+      "section": "Week 1 Preparations > Get the right equipment",
+      "document_part": "prose",
+      "text": "It should be taken off as soon as the training session is over.",
+      "label": "Obligation",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [
+        "dog"
+      ],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "as soon as the training session is over"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "triggered",
+      "temporal_markers": [
+        "as soon as"
+      ],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "should"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Triggered by the end of a session.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": "DT006",
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT008",
+      "key": "leash_item",
+      "pdf_page": 7,
+      "printed_page": 5,
+      "section": "Week 1 Preparations > Get the right equipment",
+      "document_part": "prose",
+      "text": "Six-foot fabric or leather leash.",
+      "label": "Obligation",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→self",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "presumptive",
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Equipment item under the heading 'Get the right equipment' (imperative).",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": "DT008",
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT009",
+      "key": "chain_leash_no",
+      "pdf_page": 7,
+      "printed_page": 5,
+      "section": "Week 1 Preparations > Get the right equipment",
+      "document_part": "prose",
+      "text": "A chain leash is not acceptable.",
+      "label": "Prohibition",
+      "secondary_label": null,
+      "normative_force": "prohibited",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→self",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "not acceptable"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Ban on chain leashes.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": "DT008",
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT010",
+      "key": "leash_flexible",
+      "pdf_page": 7,
+      "printed_page": 5,
+      "section": "Week 1 Preparations > Get the right equipment",
+      "document_part": "prose",
+      "text": "Buy a leash that is flexible and you can hold easily.",
+      "label": "Obligation",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "owner",
+      "interaction": "owner→self",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "presumptive",
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Leash quality requirement.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT011",
+      "key": "leash_soften",
+      "pdf_page": 7,
+      "printed_page": 5,
+      "section": "Week 1 Preparations > Get the right equipment",
+      "document_part": "prose",
+      "text": "New leather leashes are often stiff; soften them with mineral oil.",
+      "label": "Procedure",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "owner",
+      "interaction": "owner→self",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "New leather leashes are often stiff"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "presumptive",
+      "temporal_structure": "triggered",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "frequency": [
+          "often"
+        ],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Maintenance step for stiff leather leashes.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT012",
+      "key": "small_dog_size",
+      "pdf_page": 7,
+      "printed_page": 5,
+      "section": "Week 1 Preparations > Get the right equipment",
+      "document_part": "prose",
+      "text": "If you have a small dog, make certain that the leash and clasp are appropriate for the dog’s size. Oversized, heavy equipment will tire out a small dog.",
+      "label": "Obligation",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [
+        "dog"
+      ],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "If you have a small dog"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "triggered",
+      "temporal_markers": [],
+      "satisfaction": "judgment",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [
+        "Oversized, heavy equipment will tire out a small dog."
+      ],
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "frequency": [],
+        "hedge": [
+          "appropriate"
+        ],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Equipment must fit the dog's size.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT013",
+      "key": "long_line",
+      "pdf_page": 7,
+      "printed_page": 5,
+      "section": "Week 1 Preparations > Get the right equipment",
+      "document_part": "prose",
+      "text": "30-foot long line. Nylon or cotton webbing or polypropylene rope with a hasp on one end. Again, make sure it is an appropriate weight for the dog.",
+      "label": "Obligation",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [
+        "dog"
+      ],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "presumptive",
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "judgment",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "frequency": [],
+        "hedge": [
+          "appropriate"
+        ],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Equipment item with a weight-appropriateness requirement.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT014",
+      "key": "equip_rest",
+      "pdf_page": 7,
+      "printed_page": 5,
+      "section": "Week 1 Preparations > Get the right equipment",
+      "document_part": "prose",
+      "text": "Food tidbits. Soft food such as cubes of cheese or bits of hot dog. Toy. A ball or favourite dog toy. Fanny pack. For carrying the food tidbits.",
+      "label": "Obligation",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "owner",
+      "interaction": "owner→self",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "presumptive",
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT063",
+          "relation": "depends_on"
+        }
+      ],
+      "cross_refs": [],
+      "context": "The remaining equipment items: these are the reinforcers used later.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT015",
+      "key": "vet_visit",
+      "pdf_page": 7,
+      "printed_page": 5,
+      "section": "Week 1 Preparations > Visit your veterinarian",
+      "document_part": "prose",
+      "text": "Make an appointment to see your veterinarian to make certain that your dog has no health issues that could interfere with training.",
+      "label": "Obligation",
+      "secondary_label": "Oversight",
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→third party",
+      "beneficiary": [
+        "dog"
+      ],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "prospective",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "frequency": [],
+        "hedge": [
+          "could"
+        ],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT016",
+          "relation": "depended_on_by"
+        },
+        {
+          "ref": "DT042",
+          "relation": "related"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Pre-training health check by a third party (the vet).",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT016",
+      "key": "vet_resolve",
+      "pdf_page": 7,
+      "printed_page": 5,
+      "section": "Week 1 Preparations > Visit your veterinarian",
+      "document_part": "prose",
+      "text": "Deal with any problems before starting any training, and make certain your dog’s vaccinations are up to date.",
+      "label": "Obligation",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [
+        "dog"
+      ],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "prospective",
+      "temporal_markers": [
+        "before"
+      ],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT015",
+          "relation": "depends_on"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Health issues must be resolved before training begins.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT017",
+      "key": "breed_research",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "section": "Week 1 Preparations > Get to know the characteristics of your dog’s breed",
+      "document_part": "prose",
+      "text": "Visit the library or browse the Internet for information about the special characteristics of your dog’s breed and how you can make use of them in training.",
+      "label": "Epistemic",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "owner",
+      "interaction": "owner→self",
+      "beneficiary": [],
+      "target": "belief",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "presumptive",
+      "temporal_structure": "prospective",
+      "temporal_markers": [],
+      "satisfaction": "judgment",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "The owner should learn breed traits and use them in training.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT018",
+      "key": "leash_hold",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "section": "Week 1 Preparations > Learn to hold your leash correctly",
+      "document_part": "prose",
+      "text": "Put your right thumb through the loop at the end of the leash. Make a single loop and hold the loop with your right hand near your waist. This frees up your left hand to pet the dog, give him treats or help position him, as necessary.",
+      "label": "Procedure",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "owner",
+      "interaction": "owner→self",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [
+        "This frees up your left hand to pet the dog, give him treats or help position him, as necessary."
+      ],
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "frequency": [],
+        "hedge": [
+          "as necessary"
+        ],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT019",
+          "relation": "exempted_by"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Correct leash grip, which frees the left hand for reinforcement.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT019",
+      "key": "leash_two_hands",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "section": "Week 1 Preparations > Learn to hold your leash correctly",
+      "document_part": "prose",
+      "text": "Sometimes when it’s necessary to give a collar correction, you may need to hold the leash with both hands",
+      "label": "Permission",
+      "secondary_label": null,
+      "normative_force": "permitted",
+      "bearer": "owner",
+      "regulated_agent": "owner",
+      "interaction": "owner→self",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "when it’s necessary to give a collar correction"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": null,
+      "temporal_structure": "triggered",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "may need to"
+        ],
+        "frequency": [
+          "sometimes"
+        ],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT018",
+          "relation": "exempts"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Exception to the one-hand grip during a collar correction.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": "DT019",
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT020",
+      "key": "leash_free_hand",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "section": "Week 1 Preparations > Learn to hold your leash correctly",
+      "document_part": "prose",
+      "text": "but as soon as the correction is completed, free up your left hand again to praise and encourage the dog.",
+      "label": "Obligation",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "as soon as the correction is completed"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "triggered",
+      "temporal_markers": [
+        "as soon as"
+      ],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": "positive_reinforcement",
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT086",
+          "relation": "related"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Return to one hand right after a correction so the owner can praise.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": "DT019",
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT021",
+      "key": "heel_understand",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "section": "Week 1 Preparations > Learn the heel position",
+      "document_part": "prose",
+      "text": "Before practicing any heeling exercises, be certain that you completely understand the heel position.",
+      "label": "Epistemic",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "owner",
+      "interaction": "owner→self",
+      "beneficiary": [],
+      "target": "belief",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "prospective",
+      "temporal_markers": [
+        "before"
+      ],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": [
+          "completely"
+        ]
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "The owner must understand the standard before teaching it.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT022",
+      "key": "heel_def",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "section": "Week 1 Preparations > Learn the heel position",
+      "document_part": "prose",
+      "text": "You and your dog are in correct heel position when the dog is no more than four inches from your left side, facing in the same direction as you.",
+      "label": "Definition",
+      "secondary_label": null,
+      "normative_force": "constitutive",
+      "bearer": "owner and dog",
+      "regulated_agent": "dog",
+      "interaction": "dog→owner",
+      "beneficiary": [],
+      "target": "relationship",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": null,
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": "combined",
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": [
+          "no more than"
+        ]
+      },
+      "relations": [
+        {
+          "ref": "DT023",
+          "relation": "instantiated_by"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Constitutive standard for heel position. Describes a joint state of owner and dog, but the dog is the one expected to produce it.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT023",
+      "key": "heel_def_any_posture",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "section": "Week 1 Preparations > Learn the heel position",
+      "document_part": "prose",
+      "text": "Whether the dog is sitting, standing, lying down or moving next to you, he is in proper heel position when the area from his head to his shoulders is in line with your left hip/leg.",
+      "label": "Definition",
+      "secondary_label": null,
+      "normative_force": "constitutive",
+      "bearer": "dog",
+      "regulated_agent": "dog",
+      "interaction": "dog→owner",
+      "beneficiary": [],
+      "target": "relationship",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": null,
+      "temporal_structure": "continuous",
+      "temporal_markers": [
+        "next"
+      ],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": "combined",
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT022",
+          "relation": "instantiates"
+        }
+      ],
+      "cross_refs": [],
+      "context": "The heel standard holds in every posture.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT024",
+      "key": "read_intro",
+      "pdf_page": 9,
+      "printed_page": 7,
+      "section": "Lesson Plan – Week 1",
+      "document_part": "prose",
+      "text": "Before you begin the training exercises, read this introduction to dog training:",
+      "label": "Epistemic",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "owner",
+      "interaction": "owner→self",
+      "beneficiary": [],
+      "target": "belief",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "prospective",
+      "temporal_markers": [
+        "before"
+      ],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Owner must read the introduction before training.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT025",
+      "key": "rules_goal",
+      "pdf_page": 9,
+      "printed_page": 7,
+      "section": "Introduction to Dog Training > Rules to train by",
+      "document_part": "prose",
+      "text": "To make training a safe, productive experience for you and your dog, keep these tips in mind:",
+      "label": "Goal",
+      "secondary_label": null,
+      "normative_force": "valued",
+      "bearer": "owner",
+      "regulated_agent": "owner and dog",
+      "interaction": "owner→self",
+      "beneficiary": [
+        "owner",
+        "dog"
+      ],
+      "target": "outcome",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": null,
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "graded",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "States the aim behind the 11 rules. Calls them 'tips', which suggests advice rather than strict rules.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT026",
+      "key": "r1_onleash",
+      "pdf_page": 9,
+      "printed_page": 7,
+      "section": "Introduction to Dog Training > Rules to train by",
+      "document_part": "numbered_rule",
+      "text": "Unless an exercise specifically requires that you take the dog off-leash, keep your dog on-leash at all times while training.",
+      "label": "Obligation",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [
+        "dog"
+      ],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "while training"
+        ],
+        "scope": null
+      },
+      "exceptions": [
+        "Unless an exercise specifically requires that you take the dog off-leash"
+      ],
+      "strength": "explicitly_overridable",
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "frequency": [
+          "at all times"
+        ],
+        "hedge": [],
+        "restrictor": [
+          "specifically"
+        ]
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Rule 1. On-leash by default, unless an exercise requires otherwise.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT027",
+      "key": "r2_no_other_dogs",
+      "pdf_page": 9,
+      "printed_page": 7,
+      "section": "Introduction to Dog Training > Rules to train by",
+      "document_part": "numbered_rule",
+      "text": "Don’t allow your dog to sniff, pester or play with other dogs before or during training sessions.",
+      "label": "Prohibition",
+      "secondary_label": null,
+      "normative_force": "prohibited",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "continuous",
+      "temporal_markers": [
+        "before",
+        "during"
+      ],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "don’t allow",
+          "imperative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Rule 2. Rule addressed to the owner, about the dog's behavior.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT028",
+      "key": "r3_no_feed",
+      "pdf_page": 9,
+      "printed_page": 7,
+      "section": "Introduction to Dog Training > Rules to train by",
+      "document_part": "numbered_rule",
+      "text": "Don’t feed your dog for at least four hours before training.",
+      "label": "Prohibition",
+      "secondary_label": null,
+      "normative_force": "prohibited",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "prospective",
+      "temporal_markers": [
+        "at least four hours",
+        "before"
+      ],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "don’t",
+          "imperative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": [
+          "at least"
+        ]
+      },
+      "relations": [
+        {
+          "ref": "DT063",
+          "relation": "related"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Rule 3. Fasting window, presumably so food works as a motivator.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT029",
+      "key": "r4_relieve",
+      "pdf_page": 9,
+      "printed_page": 7,
+      "section": "Introduction to Dog Training > Rules to train by",
+      "document_part": "numbered_rule",
+      "text": "Before your training practice sessions, give your dog ample opportunity to relieve himself.",
+      "label": "Obligation",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [
+        "dog"
+      ],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "prospective",
+      "temporal_markers": [
+        "before"
+      ],
+      "satisfaction": "judgment",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "frequency": [],
+        "hedge": [
+          "ample"
+        ],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Rule 4.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT030",
+      "key": "r5_cleanup",
+      "pdf_page": 9,
+      "printed_page": 7,
+      "section": "Introduction to Dog Training > Rules to train by",
+      "document_part": "numbered_rule",
+      "text": "Take a plastic bag to practice sessions. If your dog defecates, clean it up.",
+      "label": "Obligation",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "owner",
+      "interaction": "owner→third party",
+      "beneficiary": [
+        "third parties"
+      ],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "If your dog defecates"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "triggered",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Rule 5. A duty owed to the public or third parties.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT031",
+      "key": "r6_rested",
+      "pdf_page": 9,
+      "printed_page": 7,
+      "section": "Introduction to Dog Training > Rules to train by",
+      "document_part": "numbered_rule",
+      "text": "Practise with your dog only if he is well rested.",
+      "label": "Obligation",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [
+        "dog"
+      ],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "only if he is well rested"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "triggered",
+      "temporal_markers": [],
+      "satisfaction": "judgment",
+      "epistemic_conditions": [
+        {
+          "text": "only if he is well rested",
+          "holder": "owner (about dog)"
+        }
+      ],
+      "enforcement_on_dog": null,
+      "rationale": [
+        "But if your dog has played all day or has gone for a long hike, chances are that any practise sessions that day will not be effective."
+      ],
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": [
+          "only"
+        ]
+      },
+      "relations": [
+        {
+          "ref": "DT032",
+          "relation": "related"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Rule 6. Training depends on the dog's physical state.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT032",
+      "key": "r6_moderate_ok",
+      "pdf_page": 9,
+      "printed_page": 7,
+      "section": "Introduction to Dog Training > Rules to train by",
+      "document_part": "numbered_rule",
+      "text": "Moderate exercise a few hours before training is fine and may actually enhance learning for some high-energy dogs.",
+      "label": "Permission",
+      "secondary_label": null,
+      "normative_force": "permitted",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": null,
+      "temporal_structure": "prospective",
+      "temporal_markers": [
+        "a few hours before"
+      ],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [],
+        "frequency": [],
+        "hedge": [
+          "may",
+          "some"
+        ],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT031",
+          "relation": "related"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Rule 6, permission part.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT033",
+      "key": "r7_consult",
+      "pdf_page": 9,
+      "printed_page": 7,
+      "section": "Introduction to Dog Training > Rules to train by",
+      "document_part": "numbered_rule",
+      "text": "Consult this manual before practising. Read and reread instructions. Then go and practise with the dog.",
+      "label": "Procedure",
+      "secondary_label": "Epistemic",
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "owner",
+      "interaction": "owner→self",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "prospective",
+      "temporal_markers": [
+        "before",
+        "then"
+      ],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Rule 7. Read first, then practise.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": "DT033",
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT034",
+      "key": "r7_patient",
+      "pdf_page": 9,
+      "printed_page": 7,
+      "section": "Introduction to Dog Training > Rules to train by",
+      "document_part": "numbered_rule",
+      "text": "Remember to be patient.",
+      "label": "Disposition",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "owner",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "disposition",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "judgment",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Rule 7. Patience as a trainer virtue.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": "DT033",
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT035",
+      "key": "r8_practise",
+      "pdf_page": 9,
+      "printed_page": 7,
+      "section": "Introduction to Dog Training > Rules to train by",
+      "document_part": "numbered_rule",
+      "text": "Practise. Practise. Practise. Dogs learn by repetition. Set aside time each day to train your dog.",
+      "label": "Obligation",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "continuous",
+      "temporal_markers": [
+        "each day"
+      ],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [
+        "Dogs learn by repetition."
+      ],
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "frequency": [
+          "each day"
+        ],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Rule 8. Daily practice.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT036",
+      "key": "r8_minimum",
+      "pdf_page": 9,
+      "printed_page": 7,
+      "section": "Introduction to Dog Training > Rules to train by",
+      "document_part": "numbered_rule",
+      "text": "At the beginner level, a minimum of 30 minutes of practice per day is usually needed.",
+      "label": "Obligation",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "At the beginner level"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "presumptive",
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "graded",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "is needed"
+        ],
+        "frequency": [
+          "usually"
+        ],
+        "hedge": [],
+        "restrictor": [
+          "a minimum of"
+        ]
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Rule 8. Quantitative minimum for beginners.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT037",
+      "key": "r8_short_sessions",
+      "pdf_page": 9,
+      "printed_page": 7,
+      "section": "Introduction to Dog Training > Rules to train by",
+      "document_part": "numbered_rule",
+      "text": "It’s always better to train for shorter periods, a couple of times a day, especially with younger or inexperienced dogs.",
+      "label": "Procedure",
+      "secondary_label": null,
+      "normative_force": "recommended",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [
+        "dog"
+      ],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "especially with younger or inexperienced dogs"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "presumptive",
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "comparative",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "better"
+        ],
+        "frequency": [
+          "always"
+        ],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Rule 8. Comparative preference for shorter, more frequent sessions.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT038",
+      "key": "r9_no_rough",
+      "pdf_page": 9,
+      "printed_page": 7,
+      "section": "Introduction to Dog Training > Rules to train by",
+      "document_part": "numbered_rule",
+      "text": "Rough or abusive treatment will not serve your training well.",
+      "label": "Prohibition",
+      "secondary_label": null,
+      "normative_force": "discouraged",
+      "bearer": "owner",
+      "regulated_agent": "owner",
+      "interaction": "owner→dog",
+      "beneficiary": [
+        "dog"
+      ],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT076",
+          "relation": "related"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Rule 9. Advises against harsh treatment by pointing to its ineffectiveness, not by forbidding it outright.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT039",
+      "key": "r9_fault",
+      "pdf_page": 9,
+      "printed_page": 7,
+      "section": "Introduction to Dog Training > Rules to train by",
+      "document_part": "numbered_rule",
+      "text": "If a dog disobeys your commands, there is a better than average chance that the problem is with you, the trainer, not the dog.",
+      "label": "Interpretation",
+      "secondary_label": null,
+      "normative_force": "constitutive",
+      "bearer": "owner",
+      "regulated_agent": "owner",
+      "interaction": "owner→self",
+      "beneficiary": [],
+      "target": "belief",
+      "activation": {
+        "conditions": [
+          "If a dog disobeys your commands"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "presumptive",
+      "temporal_structure": "post_violation",
+      "temporal_markers": [],
+      "satisfaction": "judgment",
+      "epistemic_conditions": [
+        {
+          "text": "there is a better than average chance that the problem is with you",
+          "holder": "owner"
+        }
+      ],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [],
+        "frequency": [],
+        "hedge": [
+          "better than average chance"
+        ],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT040",
+          "relation": "depended_on_by"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Rule 9. How to read the dog's non-compliance: fault is attributed to the trainer by default.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": "DT039",
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT040",
+      "key": "r9_rethink",
+      "pdf_page": 9,
+      "printed_page": 7,
+      "section": "Introduction to Dog Training > Rules to train by",
+      "document_part": "numbered_rule",
+      "text": "Rethink what you’re doing, check the training manual to refresh your memory and try again.",
+      "label": "Procedure",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "owner",
+      "interaction": "owner→self",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "post_violation",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT039",
+          "relation": "depends_on"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Rule 9. The owner's remedy after the dog disobeys.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": "DT039",
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT041",
+      "key": "r10_clean",
+      "pdf_page": 9,
+      "printed_page": 7,
+      "section": "Introduction to Dog Training > Rules to train by",
+      "document_part": "numbered_rule",
+      "text": "Your dog should be clean (brushed) and free of fleas.",
+      "label": "Obligation",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [
+        "dog"
+      ],
+      "target": "outcome",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [
+        "Aside from being a health issue, a dog with such problems will have difficulty concentrating on the lessons and training progress will be slow."
+      ],
+      "modal_markers": {
+        "deontic": [
+          "should"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Rule 10. A state of the dog the owner must maintain.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT042",
+      "key": "r10_vet",
+      "pdf_page": 9,
+      "printed_page": 7,
+      "section": "Introduction to Dog Training > Rules to train by",
+      "document_part": "numbered_rule",
+      "text": "If your dog is troubled by parasites or is experiencing skin or other grooming problems, talk to your veterinarian.",
+      "label": "Oversight",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→third party",
+      "beneficiary": [
+        "dog"
+      ],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "If your dog is troubled by parasites or is experiencing skin or other grooming problems"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "triggered",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT015",
+          "relation": "related"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Rule 10. Escalation to the vet.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT043",
+      "key": "r11_one_trainer",
+      "pdf_page": 9,
+      "printed_page": 7,
+      "section": "Introduction to Dog Training > Rules to train by",
+      "document_part": "numbered_rule",
+      "text": "If you’re training the family pet, one family member should take responsibility for training the dog and for practising the lessons each day.",
+      "label": "Authority",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "family members",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [
+        "dog"
+      ],
+      "target": "rule",
+      "activation": {
+        "conditions": [
+          "If you’re training the family pet"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "presumptive",
+      "temporal_structure": "triggered",
+      "temporal_markers": [
+        "each day"
+      ],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [
+        "it’s usually easier on the dog to have the same family member act as trainer and take the dog through the course."
+      ],
+      "modal_markers": {
+        "deontic": [
+          "should"
+        ],
+        "frequency": [
+          "each day"
+        ],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Rule 11. Assigns the trainer role to a single family member.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": "DT043",
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT044",
+      "key": "r11_others_learn",
+      "pdf_page": 9,
+      "printed_page": 7,
+      "section": "Introduction to Dog Training > Rules to train by",
+      "document_part": "numbered_rule",
+      "text": "Other family members should become familiar with commands and expectations,",
+      "label": "Epistemic",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "other family members",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "belief",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "should"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Rule 11. Non-trainers still need to know the dog's commands, so the norms on the dog stay consistent.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": "DT043",
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT045",
+      "key": "three_stages",
+      "pdf_page": 10,
+      "printed_page": 8,
+      "section": "Basic Dog Training Theory",
+      "document_part": "prose",
+      "text": "Teach each new skill or exercise to the dog in three stages:",
+      "label": "Procedure",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Introduces the three-stage method: teaching, correction, proofing.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT046",
+      "key": "stage1_def",
+      "pdf_page": 10,
+      "printed_page": 8,
+      "section": "Basic Dog Training Theory",
+      "document_part": "prose",
+      "text": "Teaching Stage. In this stage, the dog doesn’t understand what you’re asking of him.",
+      "label": "Definition",
+      "secondary_label": null,
+      "normative_force": "constitutive",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "rule",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": null,
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [
+        {
+          "text": "the dog doesn’t understand what you’re asking of him",
+          "holder": "dog"
+        }
+      ],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "The stage is defined by what the dog doesn't yet know.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": "DT046",
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT047",
+      "key": "stage1_method",
+      "pdf_page": 10,
+      "printed_page": 8,
+      "section": "Basic Dog Training Theory",
+      "document_part": "prose",
+      "text": "You’re now teaching the dog, using various aids, to associate a particular word or command with a desired action or behaviour. During this stage, you show the dog what you mean when you say, “Sit.” You use food and other aids to help the dog understand what you expect when you give the command.",
+      "label": "Procedure",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "During this stage"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "triggered",
+      "temporal_markers": [
+        "during"
+      ],
+      "satisfaction": "judgment",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": "positive_reinforcement",
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "prescriptive_indicative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT061",
+          "relation": "related"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Teaching stage method: show the dog what a command means, using food and other aids.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": "DT046",
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT048",
+      "key": "stage2_start",
+      "pdf_page": 10,
+      "printed_page": 8,
+      "section": "Basic Dog Training Theory",
+      "document_part": "prose",
+      "text": "Correction Stage. Start correcting as soon as you feel that the dog understands your expectation.",
+      "label": "Procedure",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "as soon as you feel that the dog understands your expectation"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "triggered",
+      "temporal_markers": [
+        "as soon as"
+      ],
+      "satisfaction": "judgment",
+      "epistemic_conditions": [
+        {
+          "text": "as soon as you feel that the dog understands your expectation",
+          "holder": "owner (about dog)"
+        }
+      ],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Moving to stage 2 depends on the owner's judgment of what the dog understands.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT049",
+      "key": "stage2_food_hidden",
+      "pdf_page": 10,
+      "printed_page": 8,
+      "section": "Basic Dog Training Theory",
+      "document_part": "prose",
+      "text": "Keep the food out of sight of the dog in this stage.",
+      "label": "Obligation",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "in this stage"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "triggered",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Correction stage rule.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT050",
+      "key": "stage2_reward",
+      "pdf_page": 10,
+      "printed_page": 8,
+      "section": "Basic Dog Training Theory",
+      "document_part": "prose",
+      "text": "If the dog responds correctly when you give the command, give him praise and a food tidbit, the motivator.",
+      "label": "Procedure",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "If the dog responds correctly when you give the command"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "triggered",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": "positive_reinforcement",
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Reward rule, triggered by the dog's compliance.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT051",
+      "key": "stage2_correct",
+      "pdf_page": 10,
+      "printed_page": 8,
+      "section": "Basic Dog Training Theory",
+      "document_part": "prose",
+      "text": "If the dog doesn’t give the right response, correct him to get into the desired position. Once he is in the desired position give praise – and the motivator.",
+      "label": "Procedure",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "If the dog doesn’t give the right response",
+          "Once he is in the desired position"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "post_violation",
+      "temporal_markers": [
+        "once"
+      ],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": "combined",
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Correction then praise, triggered by the dog's non-compliance.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT052",
+      "key": "stage3_start",
+      "pdf_page": 10,
+      "printed_page": 8,
+      "section": "Basic Dog Training Theory",
+      "document_part": "prose",
+      "text": "Proofing Stage. This final stage starts only after the dog consistently performs the exercise correctly and no longer needs correction.",
+      "label": "Procedure",
+      "secondary_label": null,
+      "normative_force": "constitutive",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "rule",
+      "activation": {
+        "conditions": [
+          "only after the dog consistently performs the exercise correctly and no longer needs correction"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "triggered",
+      "temporal_markers": [
+        "final",
+        "after"
+      ],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [],
+        "frequency": [
+          "consistently"
+        ],
+        "hedge": [],
+        "restrictor": [
+          "only"
+        ]
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Stage 3 begins only once the dog performs reliably.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT053",
+      "key": "stage3_goal",
+      "pdf_page": 10,
+      "printed_page": 8,
+      "section": "Basic Dog Training Theory",
+      "document_part": "prose",
+      "text": "The proofing stage seeks to ensure that the dog’s response is reliable in less-than-ideal conditions.",
+      "label": "Goal",
+      "secondary_label": null,
+      "normative_force": "valued",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "outcome",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": null,
+      "temporal_structure": "triggered",
+      "temporal_markers": [],
+      "satisfaction": "graded",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT055",
+          "relation": "explained_by"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Aim of proofing: reliability.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT054",
+      "key": "stage3_method",
+      "pdf_page": 10,
+      "printed_page": 8,
+      "section": "Basic Dog Training Theory",
+      "document_part": "prose",
+      "text": "During this stage, you gradually introduce distractions while the dog works. If he becomes distracted, you teach him to continue to work.",
+      "label": "Procedure",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "During this stage",
+          "If he becomes distracted"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "triggered",
+      "temporal_markers": [
+        "during"
+      ],
+      "satisfaction": "graded",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "prescriptive_indicative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Proofing method.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT055",
+      "key": "stage3_obey",
+      "pdf_page": 10,
+      "printed_page": 8,
+      "section": "Basic Dog Training Theory",
+      "document_part": "prose",
+      "text": "Teaching him to obey despite distractions helps make him a safe dog and reliable in any situation.",
+      "label": "Goal",
+      "secondary_label": null,
+      "normative_force": "valued",
+      "bearer": "dog",
+      "regulated_agent": "dog",
+      "interaction": "dog→owner",
+      "beneficiary": [
+        "dog",
+        "third parties"
+      ],
+      "target": "disposition",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": null,
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "graded",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT053",
+          "relation": "explains"
+        }
+      ],
+      "cross_refs": [],
+      "context": "The end-state norm for the dog: obey despite distractions. Gives the reason for proofing.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT056",
+      "key": "training_def",
+      "pdf_page": 10,
+      "printed_page": 8,
+      "section": "Basic Dog Training Theory > About teaching desired behaviour",
+      "document_part": "prose",
+      "text": "Dog training is simply shaping the animal’s behaviour to conform to what is acceptable to people.",
+      "label": "Definition",
+      "secondary_label": "Authority",
+      "normative_force": "constitutive",
+      "bearer": "dog",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "rule",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": null,
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "judgment",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": [
+          "simply"
+        ]
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Constitutive statement: what is acceptable to people is the source of the norms on the dog.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT057",
+      "key": "define_behaviour",
+      "pdf_page": 10,
+      "printed_page": 8,
+      "section": "Basic Dog Training Theory > About teaching desired behaviour",
+      "document_part": "prose",
+      "text": "First, we need to clearly define the desired behaviour.",
+      "label": "Procedure",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→self",
+      "beneficiary": [],
+      "target": "rule",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "prospective",
+      "temporal_markers": [
+        "first"
+      ],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "need to"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Step 1 of the shaping method.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT058",
+      "key": "task_analysis",
+      "pdf_page": 10,
+      "printed_page": 8,
+      "section": "Basic Dog Training Theory > About teaching desired behaviour",
+      "document_part": "prose",
+      "text": "Then we break down the behaviour down into small, achievable parts. This is known as “task analysis.”",
+      "label": "Procedure",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→self",
+      "beneficiary": [],
+      "target": "rule",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "prospective",
+      "temporal_markers": [
+        "then"
+      ],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "prescriptive_indicative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Step 2: task analysis. (The doubled 'down' is in the original.)",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT059",
+      "key": "sequence",
+      "pdf_page": 10,
+      "printed_page": 8,
+      "section": "Basic Dog Training Theory > About teaching desired behaviour",
+      "document_part": "prose",
+      "text": "Next, we determine what needs to be taught first. Once decided, we begin by teaching this first element and reinforcing it until the dog understands it. Then we move to the next logical element in the sequence, and so on. Each element builds on the previous element(s) until an entire behaviour is learned.",
+      "label": "Procedure",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "triggered",
+      "temporal_markers": [
+        "next",
+        "first",
+        "once",
+        "until",
+        "then"
+      ],
+      "satisfaction": "binary",
+      "epistemic_conditions": [
+        {
+          "text": "until the dog understands it",
+          "holder": "dog"
+        }
+      ],
+      "enforcement_on_dog": "positive_reinforcement",
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "needs to"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Step 3: teach elements in order, moving on only once the dog understands each one.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT060",
+      "key": "reinf_kinds",
+      "pdf_page": 10,
+      "printed_page": 8,
+      "section": "Basic Dog Training Theory > About teaching desired behaviour",
+      "document_part": "prose",
+      "text": "There are two kinds of reinforcement: positive and negative.",
+      "label": "Definition",
+      "secondary_label": null,
+      "normative_force": "constitutive",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "rule",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": null,
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Taxonomy of reinforcement.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT061",
+      "key": "teach_pos_only",
+      "pdf_page": 10,
+      "printed_page": 8,
+      "section": "Basic Dog Training Theory > About teaching desired behaviour",
+      "document_part": "prose",
+      "text": "In the teaching stage, we rely exclusively on positive reinforcement.",
+      "label": "Procedure",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "In the teaching stage"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "triggered",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": "positive_reinforcement",
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "prescriptive_indicative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": [
+          "exclusively"
+        ]
+      },
+      "relations": [
+        {
+          "ref": "DT047",
+          "relation": "related"
+        },
+        {
+          "ref": "DT083",
+          "relation": "instantiated_by"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Only positive reinforcement during teaching.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT062",
+      "key": "corr_combine",
+      "pdf_page": 10,
+      "printed_page": 8,
+      "section": "Basic Dog Training Theory > About teaching desired behaviour",
+      "document_part": "prose",
+      "text": "Once we get to the correction stage of any exercise, we combine positive and negative reinforcement.",
+      "label": "Procedure",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "Once we get to the correction stage of any exercise"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "triggered",
+      "temporal_markers": [
+        "once"
+      ],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": "combined",
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "prescriptive_indicative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT077",
+          "relation": "related"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Both kinds of reinforcement during correction.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT063",
+      "key": "posrf_def",
+      "pdf_page": 11,
+      "printed_page": 9,
+      "section": "Positive reinforcement",
+      "document_part": "prose",
+      "text": "A positive reinforcer is any thing or any action that the dog enjoys that, by itself, or in combination with others, will increase the likelihood that the dog will perform a desired behaviour again. Sometimes referred to as motivators, they can include food, play with a favourite toy, verbal praise, or physical stroking.",
+      "label": "Definition",
+      "secondary_label": null,
+      "normative_force": "constitutive",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "rule",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": null,
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [
+        {
+          "text": "that the dog enjoys",
+          "holder": "dog"
+        }
+      ],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [],
+        "frequency": [],
+        "hedge": [
+          "can"
+        ],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT014",
+          "relation": "depended_on_by"
+        },
+        {
+          "ref": "DT028",
+          "relation": "related"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Defined by what the dog enjoys, i.e. from the dog's point of view.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT064",
+      "key": "motivator_positive",
+      "pdf_page": 11,
+      "printed_page": 9,
+      "section": "Positive reinforcement",
+      "document_part": "prose",
+      "text": "It is important that the motivator be positive to the dog.",
+      "label": "Obligation",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "judgment",
+      "epistemic_conditions": [
+        {
+          "text": "be positive to the dog",
+          "holder": "dog"
+        }
+      ],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "is important"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT065",
+          "relation": "instantiated_by"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Whether a reinforcer counts is judged from the dog's preferences.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT065",
+      "key": "motivator_example",
+      "pdf_page": 11,
+      "printed_page": 9,
+      "section": "Positive reinforcement",
+      "document_part": "prose",
+      "text": "If, for example, you were training a dog that doesn’t like to be stroked (yes, there are some) then petting the dog when he has performed a desired behaviour would actually work against your training.",
+      "label": "Interpretation",
+      "secondary_label": null,
+      "normative_force": "constitutive",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": null,
+      "temporal_structure": "triggered",
+      "temporal_markers": [
+        "then"
+      ],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [],
+        "frequency": [],
+        "hedge": [
+          "some"
+        ],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT064",
+          "relation": "instantiates"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Example: stroking stops being a reinforcer for a dog that dislikes it.",
+      "is_example": true,
+      "parent_id": "DT064",
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT066",
+      "key": "posrf_components",
+      "pdf_page": 11,
+      "printed_page": 9,
+      "section": "Positive reinforcement",
+      "document_part": "prose",
+      "text": "When the dog gives you a desired behaviour, particularly in the early stages of teaching a specific exercise, positive reinforcement should have the following component parts:",
+      "label": "Procedure",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "When the dog gives you a desired behaviour",
+          "particularly in the early stages of teaching a specific exercise"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "triggered",
+      "temporal_markers": [
+        "early stages"
+      ],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": "positive_reinforcement",
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "should"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT067",
+          "relation": "instantiated_by"
+        },
+        {
+          "ref": "DT068",
+          "relation": "instantiated_by"
+        },
+        {
+          "ref": "DT069",
+          "relation": "instantiated_by"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Lead-in to the three components of positive reinforcement.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT067",
+      "key": "praise_genuine",
+      "pdf_page": 11,
+      "printed_page": 9,
+      "section": "Positive reinforcement",
+      "document_part": "list_item",
+      "text": "Verbal praise. Make it genuine and enthusiastic.",
+      "label": "Obligation",
+      "secondary_label": "Disposition",
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "output",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "triggered",
+      "temporal_markers": [],
+      "satisfaction": "judgment",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": "positive_reinforcement",
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT066",
+          "relation": "instantiates"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Component 1. Also sets the manner: genuine and enthusiastic.",
+      "is_example": false,
+      "parent_id": "DT066",
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT068",
+      "key": "stroke_if_enjoys",
+      "pdf_page": 11,
+      "printed_page": 9,
+      "section": "Positive reinforcement",
+      "document_part": "list_item",
+      "text": "Stroking or petting the dog – if the dog enjoys it.",
+      "label": "Obligation",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "if the dog enjoys it"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "explicitly_overridable",
+      "temporal_structure": "triggered",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [
+        {
+          "text": "if the dog enjoys it",
+          "holder": "dog"
+        }
+      ],
+      "enforcement_on_dog": "positive_reinforcement",
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "prescriptive_indicative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT066",
+          "relation": "instantiates"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Component 2, conditional on the dog's preference.",
+      "is_example": false,
+      "parent_id": "DT066",
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT069",
+      "key": "food_or_play",
+      "pdf_page": 11,
+      "printed_page": 9,
+      "section": "Positive reinforcement",
+      "document_part": "list_item",
+      "text": "Food tidbit or play with a favourite toy or ball.",
+      "label": "Obligation",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "triggered",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": "positive_reinforcement",
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "prescriptive_indicative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT066",
+          "relation": "instantiates"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Component 3.",
+      "is_example": false,
+      "parent_id": "DT066",
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT070",
+      "key": "negrf_def",
+      "pdf_page": 11,
+      "printed_page": 9,
+      "section": "Negative reinforcement",
+      "document_part": "prose",
+      "text": "Negative reinforcement is an action or stimulus that the dog interprets as negative, which by itself or in combination with other reinforcers will increase the likelihood that the dog will perform a desired behaviour again, or will reduce the likelihood that he will perform an unwanted behaviour again.",
+      "label": "Definition",
+      "secondary_label": null,
+      "normative_force": "constitutive",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "rule",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": null,
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [
+        {
+          "text": "that the dog interprets as negative",
+          "holder": "dog"
+        }
+      ],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Also defined by how the dog interprets it.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT071",
+      "key": "negrf_select",
+      "pdf_page": 11,
+      "printed_page": 9,
+      "section": "Negative reinforcement",
+      "document_part": "prose",
+      "text": "Select a negative reinforcer that will manipulate the dog into correcting an unwanted behaviour by substituting it with a wanted or desired behaviour.",
+      "label": "Procedure",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "triggered",
+      "temporal_markers": [],
+      "satisfaction": "judgment",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": "negative_reinforcement",
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT072",
+          "relation": "instantiated_by"
+        }
+      ],
+      "cross_refs": [],
+      "context": "A negative reinforcer must steer the dog toward a replacement behaviour.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT072",
+      "key": "negrf_example",
+      "pdf_page": 11,
+      "printed_page": 9,
+      "section": "Negative reinforcement",
+      "document_part": "prose",
+      "text": "If your dog is pulling on the leash, you quickly step to the side and pop the leash and collar so that you slightly off-balance him. To avoid the discomfort, the dog stops pulling on the leash and instead, walks with a loose leash.",
+      "label": "Procedure",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "If your dog is pulling on the leash"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "post_violation",
+      "temporal_markers": [
+        "quickly"
+      ],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": "negative_reinforcement",
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "prescriptive_indicative"
+        ],
+        "frequency": [],
+        "hedge": [
+          "slightly"
+        ],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT071",
+          "relation": "instantiates"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Worked example of negative reinforcement for leash pulling.",
+      "is_example": true,
+      "parent_id": "DT071",
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT073",
+      "key": "dog_control",
+      "pdf_page": 11,
+      "printed_page": 9,
+      "section": "Negative reinforcement",
+      "document_part": "prose",
+      "text": "Note that the dog has control over this situation. He can avoid the discomfort merely by correcting his actions, in this case, by walking at your left side and letting the leash go slack.",
+      "label": "Permission",
+      "secondary_label": null,
+      "normative_force": "permitted",
+      "bearer": "dog",
+      "regulated_agent": "dog",
+      "interaction": "dog→owner",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": null,
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": "negative_reinforcement",
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "can"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": [
+          "merely"
+        ]
+      },
+      "relations": [
+        {
+          "ref": "DT075",
+          "relation": "related"
+        }
+      ],
+      "cross_refs": [],
+      "context": "The dog's agency: it always has a way to end the aversive stimulus by complying. This is what separates negative reinforcement from punishment.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT074",
+      "key": "neg_vs_pun",
+      "pdf_page": 11,
+      "printed_page": 9,
+      "section": "No place for punishment in dog training",
+      "document_part": "prose",
+      "text": "The term negative reinforcement is often used interchangeably with the word “punishment.” IN DOG TRAINING, THEY’RE NOT THE SAME THING.",
+      "label": "Definition",
+      "secondary_label": null,
+      "normative_force": "constitutive",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "rule",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": null,
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [],
+        "frequency": [
+          "often"
+        ],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Conceptual distinction, emphasized in capitals in the original.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT075",
+      "key": "pun_def",
+      "pdf_page": 11,
+      "printed_page": 9,
+      "section": "No place for punishment in dog training",
+      "document_part": "list_item",
+      "text": "Punishment: Is usually dished out after the fact. Usually has a negative emotional component, carrying with it frustration or anger. Usually fails to give the dog a way out. He cannot correct a behaviour in order to stop the discomfort.",
+      "label": "Definition",
+      "secondary_label": null,
+      "normative_force": "constitutive",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "rule",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": null,
+      "temporal_structure": "continuous",
+      "temporal_markers": [
+        "after the fact"
+      ],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [],
+        "frequency": [
+          "usually"
+        ],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT073",
+          "relation": "related"
+        },
+        {
+          "ref": "DT104",
+          "relation": "related"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Three typical features of punishment: delayed, emotional, and leaving the dog no way out.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT076",
+      "key": "pun_no_place",
+      "pdf_page": 11,
+      "printed_page": 9,
+      "section": "No place for punishment in dog training",
+      "document_part": "prose",
+      "text": "Punishment neither increases desired behaviour nor decreases undesirable behaviour. It’s useless as a training tool and has no place in dog training.",
+      "label": "Prohibition",
+      "secondary_label": null,
+      "normative_force": "prohibited",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [
+        "dog"
+      ],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [
+        "Punishment neither increases desired behaviour nor decreases undesirable behaviour."
+      ],
+      "modal_markers": {
+        "deontic": [
+          "has no place"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT038",
+          "relation": "related"
+        },
+        {
+          "ref": "DT079",
+          "relation": "related"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Categorical ban on punishment, justified by its ineffectiveness.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT077",
+      "key": "combine_when",
+      "pdf_page": 12,
+      "printed_page": 10,
+      "section": "Combining reinforcers",
+      "document_part": "prose",
+      "text": "Combining negative reinforcement with positive reinforcement starts in the correction stage of an exercise.",
+      "label": "Procedure",
+      "secondary_label": null,
+      "normative_force": "constitutive",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "rule",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "triggered",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": "combined",
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT062",
+          "relation": "related"
+        },
+        {
+          "ref": "DT078",
+          "relation": "instantiated_by"
+        }
+      ],
+      "cross_refs": [],
+      "context": "When combined reinforcement begins.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT078",
+      "key": "combine_example",
+      "pdf_page": 12,
+      "printed_page": 10,
+      "section": "Combining reinforcers",
+      "document_part": "prose",
+      "text": "Say your dog is tugging on the leash. You say, “No pulling” and quickly step to the right and pop the collar to slightly off-balance the dog. The pop on the collar is negative reinforcement. To avoid the negative sensation, the dog backs off and stops pulling on the leash. You instantly say, “Good no pulling!” in an excited and obviously pleased voice. That’s positive reinforcement.",
+      "label": "Procedure",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "post_violation",
+      "temporal_markers": [
+        "quickly",
+        "instantly"
+      ],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": "combined",
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "prescriptive_indicative"
+        ],
+        "frequency": [],
+        "hedge": [
+          "slightly"
+        ],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT077",
+          "relation": "instantiates"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Worked example: name the behaviour, correct it, then praise immediately.",
+      "is_example": true,
+      "parent_id": "DT077",
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT079",
+      "key": "combine_value",
+      "pdf_page": 12,
+      "printed_page": 10,
+      "section": "Combining reinforcers",
+      "document_part": "prose",
+      "text": "This combining of reinforcers is your most powerful teaching tool and the dog’s best opportunity to learn. Combining reinforcers sidesteps punishment by giving the dog an acceptable, alternative behaviour and helps name that behaviour: “No pulling.”",
+      "label": "Value",
+      "secondary_label": null,
+      "normative_force": "valued",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [
+        "dog",
+        "owner"
+      ],
+      "target": "rule",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": null,
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "comparative",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT076",
+          "relation": "related"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Rates combined reinforcement as the best tool and contrasts it with punishment.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT080",
+      "key": "dog_learns_norm",
+      "pdf_page": 12,
+      "printed_page": 10,
+      "section": "Combining reinforcers",
+      "document_part": "prose",
+      "text": "If you apply the correction effectively each time the dog pulls the leash tight, he’ll learn not only that pulling is unacceptable, but also what the words “no pulling” mean.",
+      "label": "Prohibition",
+      "secondary_label": "Epistemic",
+      "normative_force": "prohibited",
+      "bearer": "dog",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "If you apply the correction effectively each time the dog pulls the leash tight"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "triggered",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [
+        {
+          "text": "he’ll learn not only that pulling is unacceptable",
+          "holder": "dog"
+        }
+      ],
+      "enforcement_on_dog": "combined",
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "unacceptable"
+        ],
+        "frequency": [
+          "each time"
+        ],
+        "hedge": [],
+        "restrictor": [
+          "only"
+        ]
+      },
+      "relations": [
+        {
+          "ref": "DT081",
+          "relation": "depended_on_by"
+        }
+      ],
+      "cross_refs": [],
+      "context": "A norm on the dog ('pulling is unacceptable'), which the dog comes to know through consistent correction by the owner.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT081",
+      "key": "voice_substitute",
+      "pdf_page": 12,
+      "printed_page": 10,
+      "section": "Combining reinforcers",
+      "document_part": "prose",
+      "text": "Once this happens, you can start to substitute a voice correction for a jerk or tug on the leash.",
+      "label": "Permission",
+      "secondary_label": null,
+      "normative_force": "permitted",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "Once this happens"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": null,
+      "temporal_structure": "triggered",
+      "temporal_markers": [
+        "once"
+      ],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "can"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT080",
+          "relation": "depends_on"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Unlocked once the dog has learned the cue: switch from physical to voice correction.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT082",
+      "key": "teach_always_pos",
+      "pdf_page": 12,
+      "printed_page": 10,
+      "section": "More about reinforcers",
+      "document_part": "prose",
+      "text": "In the teaching stage, you offer positive reinforcement each and every time you ask for, and get, a desired behaviour.",
+      "label": "Obligation",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "In the teaching stage"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "triggered",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": "positive_reinforcement",
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "prescriptive_indicative"
+        ],
+        "frequency": [
+          "each and every time"
+        ],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT084",
+          "relation": "related"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Positive reinforcement on every success during teaching.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": "DT082",
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT083",
+      "key": "teach_no_corr",
+      "pdf_page": 12,
+      "printed_page": 10,
+      "section": "More about reinforcers",
+      "document_part": "prose",
+      "text": "No corrections are given.",
+      "label": "Prohibition",
+      "secondary_label": null,
+      "normative_force": "prohibited",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "triggered",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "prescriptive_indicative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT061",
+          "relation": "instantiates"
+        }
+      ],
+      "cross_refs": [],
+      "context": "No corrections during teaching.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": "DT082",
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT084",
+      "key": "reread_sidebar",
+      "pdf_page": 12,
+      "printed_page": 10,
+      "section": "More about reinforcers",
+      "document_part": "sidebar",
+      "text": "Reread this paragraph. It is key to successful training.",
+      "label": "Epistemic",
+      "secondary_label": "Priority",
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "owner",
+      "interaction": "owner→self",
+      "beneficiary": [],
+      "target": "belief",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT082",
+          "relation": "related"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Sidebar callout marking the teaching-stage rule as essential.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT085",
+      "key": "corr_stage_correct",
+      "pdf_page": 12,
+      "printed_page": 10,
+      "section": "More about reinforcers",
+      "document_part": "prose",
+      "text": "Once we move to the correction stage, we correct undesirable behaviour.",
+      "label": "Procedure",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "Once we move to the correction stage"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "post_violation",
+      "temporal_markers": [
+        "once"
+      ],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": "negative_reinforcement",
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "prescriptive_indicative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Correcting begins in the correction stage.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT086",
+      "key": "praise_after_correction",
+      "pdf_page": 12,
+      "printed_page": 10,
+      "section": "More about reinforcers",
+      "document_part": "prose",
+      "text": "Every time you correct a dog for undesirable behaviour (negative reinforcer), you must praise him (positive reinforcer) when he corrects the behaviour.",
+      "label": "Obligation",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "when he corrects the behaviour"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "post_violation",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": "combined",
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "must"
+        ],
+        "frequency": [
+          "every time"
+        ],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT020",
+          "relation": "related"
+        },
+        {
+          "ref": "DT087",
+          "relation": "instantiated_by"
+        },
+        {
+          "ref": "DT107",
+          "relation": "related"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Every correction must be followed by praise once the dog complies.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT087",
+      "key": "praise_equal",
+      "pdf_page": 12,
+      "printed_page": 10,
+      "section": "More about reinforcers",
+      "document_part": "prose",
+      "text": "If the correction is hard, then you must praise him with equal energy when he corrects that behaviour. This is extremely important.",
+      "label": "Obligation",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "If the correction is hard"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "post_violation",
+      "temporal_markers": [
+        "then"
+      ],
+      "satisfaction": "comparative",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": "combined",
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "must"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT086",
+          "relation": "instantiates"
+        },
+        {
+          "ref": "DT088",
+          "relation": "explained_by"
+        },
+        {
+          "ref": "DT107",
+          "relation": "related"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Proportionality: praise must match the strength of the correction.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT088",
+      "key": "overuse_harm",
+      "pdf_page": 12,
+      "printed_page": 10,
+      "section": "More about reinforcers",
+      "document_part": "prose",
+      "text": "When trainers overuse negative reinforcement and/or don’t balance it with equal or better positive reinforcement, their dogs begin to lose their will to try. Their enthusiasm wanes. They try to avoid the trainer; they hate the work and they look as if they have been abused.",
+      "label": "Prohibition",
+      "secondary_label": null,
+      "normative_force": "discouraged",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [
+        "dog"
+      ],
+      "target": "outcome",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": null,
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "comparative",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT087",
+          "relation": "explains"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Implicit ban on overusing correction, stated through its effects on the dog's motivation and welfare.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "borderline"
+    },
+    {
+      "id": "DT089",
+      "key": "reinf_discretion",
+      "pdf_page": 12,
+      "printed_page": 10,
+      "section": "Choosing reinforcers",
+      "document_part": "prose",
+      "text": "The positive reinforcer you choose will depend on the exercise you’re teaching. Certain exercises lend themselves to food tidbits while others lend themselves better to voice praise or physical stroking. A certain amount of discretion is needed here.",
+      "label": "Permission",
+      "secondary_label": null,
+      "normative_force": "permitted",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": null,
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "judgment",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "is needed"
+        ],
+        "frequency": [],
+        "hedge": [
+          "a certain amount of"
+        ],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Owner's discretion in choosing reinforcers.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT090",
+      "key": "food_young",
+      "pdf_page": 12,
+      "printed_page": 10,
+      "section": "Choosing reinforcers",
+      "document_part": "prose",
+      "text": "For young dogs, food tidbits are very motivating and using them will speed up learning.",
+      "label": "Default",
+      "secondary_label": null,
+      "normative_force": "recommended",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "For young dogs"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "presumptive",
+      "temporal_structure": "triggered",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": "positive_reinforcement",
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Food as the default reinforcer for young dogs.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT091",
+      "key": "wean_goal",
+      "pdf_page": 12,
+      "printed_page": 10,
+      "section": "Choosing reinforcers",
+      "document_part": "prose",
+      "text": "Eventually, we will want to wean ourselves, and the dog, from using food so that the dog works primarily for praise.",
+      "label": "Goal",
+      "secondary_label": null,
+      "normative_force": "valued",
+      "bearer": "owner and dog",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "disposition",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": null,
+      "temporal_structure": "prospective",
+      "temporal_markers": [
+        "eventually"
+      ],
+      "satisfaction": "graded",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": [
+          "primarily"
+        ]
+      },
+      "relations": [
+        {
+          "ref": "DT092",
+          "relation": "depended_on_by"
+        },
+        {
+          "ref": "DT093",
+          "relation": "instantiated_by"
+        },
+        {
+          "ref": "DT095",
+          "relation": "instantiated_by"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Long-term goal: the dog works for praise rather than food.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT092",
+      "key": "praise_with_food",
+      "pdf_page": 12,
+      "printed_page": 10,
+      "section": "Choosing reinforcers",
+      "document_part": "prose",
+      "text": "To get ready for this, you must always PRAISE and/or STROKE the dog as you reward him with a food tidbit.",
+      "label": "Obligation",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "as you reward him with a food tidbit"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "triggered",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": "positive_reinforcement",
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "must"
+        ],
+        "frequency": [
+          "always"
+        ],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT091",
+          "relation": "depends_on"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Pair praise with food so praise can take over later. (Capitals are in the original.)",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT093",
+      "key": "withdraw_food",
+      "pdf_page": 13,
+      "printed_page": 11,
+      "section": "Choosing reinforcers",
+      "document_part": "prose",
+      "text": "If you start training your dog using food, you must systematically and slowly withdraw food as the primary reinforcer.",
+      "label": "Obligation",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "If you start training your dog using food"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "triggered",
+      "temporal_markers": [],
+      "satisfaction": "graded",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "must"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": [
+          "systematically"
+        ]
+      },
+      "relations": [
+        {
+          "ref": "DT091",
+          "relation": "instantiates"
+        },
+        {
+          "ref": "DT094",
+          "relation": "exempted_by"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Gradual food withdrawal.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT094",
+      "key": "food_occasional",
+      "pdf_page": 13,
+      "printed_page": 11,
+      "section": "Choosing reinforcers",
+      "document_part": "prose",
+      "text": "You can still use food occasionally to reward a job well done. In fact, occasionally rewarding the dog with a motivator in addition to praise is good practice.",
+      "label": "Permission",
+      "secondary_label": null,
+      "normative_force": "permitted",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": null,
+      "temporal_structure": "triggered",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": "positive_reinforcement",
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "can"
+        ],
+        "frequency": [
+          "occasionally"
+        ],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT093",
+          "relation": "exempts"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Occasional food rewards stay permitted, even recommended.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT095",
+      "key": "praise_primary",
+      "pdf_page": 13,
+      "printed_page": 11,
+      "section": "Choosing reinforcers",
+      "document_part": "prose",
+      "text": "However, eventually verbal and physical praise need to become the primary reinforcers. Food needs to become a secondary or even a tertiary reinforcer.",
+      "label": "Priority",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "rule",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "prospective",
+      "temporal_markers": [
+        "eventually"
+      ],
+      "satisfaction": "comparative",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [
+        "If you have paired the positive reinforcers, verbal and physical praise will take on more importance than food tidbits to most dogs."
+      ],
+      "modal_markers": {
+        "deontic": [
+          "need to",
+          "needs to"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT091",
+          "relation": "instantiates"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Final ranking of reinforcers.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT096",
+      "key": "least_intrusive",
+      "pdf_page": 13,
+      "printed_page": 11,
+      "section": "Choosing reinforcers",
+      "document_part": "prose",
+      "text": "The choice of negative reinforcers should be based on the option which is the least intrusive to get the job done.",
+      "label": "Procedure",
+      "secondary_label": "Priority",
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [
+        "dog"
+      ],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "comparative",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": "negative_reinforcement",
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "should"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT097",
+          "relation": "instantiated_by"
+        },
+        {
+          "ref": "DT099",
+          "relation": "related"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Least-intrusive-means principle for corrections.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT097",
+      "key": "least_intrusive_ex",
+      "pdf_page": 13,
+      "printed_page": 11,
+      "section": "Choosing reinforcers",
+      "document_part": "prose",
+      "text": "For example, voice correction is less intrusive than a collar correction. If a voice correction will get the desired results, there is no need to apply the stronger correction.",
+      "label": "Priority",
+      "secondary_label": null,
+      "normative_force": "constitutive",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "If a voice correction will get the desired results"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "triggered",
+      "temporal_markers": [],
+      "satisfaction": "comparative",
+      "epistemic_conditions": [
+        {
+          "text": "If a voice correction will get the desired results",
+          "holder": "owner (about dog)"
+        }
+      ],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "no need"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT096",
+          "relation": "instantiates"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Ranks voice correction below collar correction in intrusiveness.",
+      "is_example": true,
+      "parent_id": "DT096",
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT098",
+      "key": "corr_art",
+      "pdf_page": 13,
+      "printed_page": 11,
+      "section": "About corrections",
+      "document_part": "prose",
+      "text": "An important part of the art of dog training lies in which corrections you choose and how you give them. As training progresses, you’ll develop an intuitive sense about the level and type of correction your dog needs.",
+      "label": "Disposition",
+      "secondary_label": null,
+      "normative_force": "valued",
+      "bearer": "owner",
+      "regulated_agent": "owner",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "disposition",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": null,
+      "temporal_structure": "prospective",
+      "temporal_markers": [
+        "as training progresses"
+      ],
+      "satisfaction": "judgment",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "The trainer's skill develops into intuition over time.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT099",
+      "key": "corr_calibrate",
+      "pdf_page": 13,
+      "printed_page": 11,
+      "section": "About corrections",
+      "document_part": "prose",
+      "text": "Some dogs are very sensitive. Slight pressure on the collar will produce the desired, or corrected, behaviour. Others may need a stronger pop on the collar. Situations also vary. In some cases, a voice correction will get the desired result. Others will call for a collar correction.",
+      "label": "Epistemic",
+      "secondary_label": null,
+      "normative_force": "constitutive",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "belief",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": null,
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "judgment",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [],
+        "frequency": [],
+        "hedge": [
+          "some",
+          "may"
+        ],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT096",
+          "relation": "related"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Correction strength has to be calibrated to the individual dog and the situation.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "borderline"
+    },
+    {
+      "id": "DT100",
+      "key": "corr_swift",
+      "pdf_page": 13,
+      "printed_page": 11,
+      "section": "About corrections",
+      "document_part": "prose",
+      "text": "You need to apply corrections swiftly and give them where the dog is.",
+      "label": "Obligation",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "post_violation",
+      "temporal_markers": [
+        "swiftly"
+      ],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": "negative_reinforcement",
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "need to"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT101",
+          "relation": "related"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Corrections must be immediate and given close to the dog.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT101",
+      "key": "no_distance_voice",
+      "pdf_page": 13,
+      "printed_page": 11,
+      "section": "About corrections",
+      "document_part": "prose",
+      "text": "Trying to influence a dog’s behaviour from a distance generally relies on voice commands. At the beginner level of training, such attempts are useless for two reasons: The dog lacks the experience for voice corrections to be effective. As a trainer, you have no back-up plan if the voice correction fails. You have no way to follow through with the dog to make sure he obeys you and corrects the behaviour.",
+      "label": "Prohibition",
+      "secondary_label": "Oversight",
+      "normative_force": "discouraged",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "At the beginner level of training"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "presumptive",
+      "temporal_structure": "triggered",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [
+        {
+          "text": "The dog lacks the experience for voice corrections to be effective",
+          "holder": "dog"
+        }
+      ],
+      "enforcement_on_dog": null,
+      "rationale": [
+        "Relying on voice correction at this early stage will most likely lead you into the trap of unwittingly training your dog to not respond to you."
+      ],
+      "modal_markers": {
+        "deontic": [],
+        "frequency": [
+          "generally"
+        ],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT100",
+          "relation": "related"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Advises against correcting from a distance at the beginner level. The reason is enforceability: the owner can't follow through.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT102",
+      "key": "matter_of_fact",
+      "pdf_page": 13,
+      "printed_page": 11,
+      "section": "About corrections",
+      "document_part": "prose",
+      "text": "At all times you should also give corrections with a matter-of-fact style. It’s a straightforward process and a correction is nothing more and nothing less than a training tool.",
+      "label": "Obligation",
+      "secondary_label": "Disposition",
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "output",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "judgment",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "should"
+        ],
+        "frequency": [
+          "at all times"
+        ],
+        "hedge": [],
+        "restrictor": [
+          "nothing more and nothing less"
+        ]
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Manner of correcting: calm and impersonal.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT103",
+      "key": "corr_def",
+      "pdf_page": 13,
+      "printed_page": 11,
+      "section": "About corrections",
+      "document_part": "prose",
+      "text": "Very simply, your dog didn’t comply with your command, so you prompt or position him until he produces the desired behaviour.",
+      "label": "Definition",
+      "secondary_label": null,
+      "normative_force": "constitutive",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "your dog didn’t comply with your command"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": null,
+      "temporal_structure": "post_violation",
+      "temporal_markers": [
+        "until"
+      ],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": "negative_reinforcement",
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": [
+          "simply"
+        ]
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Defines a correction functionally.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT104",
+      "key": "no_emotion",
+      "pdf_page": 13,
+      "printed_page": 11,
+      "section": "About corrections",
+      "document_part": "prose",
+      "text": "Take care to never charge your corrections with emotion. Anger and frustration have no place in dog training.",
+      "label": "Prohibition",
+      "secondary_label": "Disposition",
+      "normative_force": "prohibited",
+      "bearer": "owner",
+      "regulated_agent": "owner",
+      "interaction": "owner→dog",
+      "beneficiary": [
+        "dog"
+      ],
+      "target": "disposition",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "have no place",
+          "imperative"
+        ],
+        "frequency": [
+          "never"
+        ],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [
+        {
+          "ref": "DT075",
+          "relation": "related"
+        },
+        {
+          "ref": "DT105",
+          "relation": "related"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Absolute ban on emotional corrections.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT105",
+      "key": "emotion_in_praise",
+      "pdf_page": 13,
+      "printed_page": 11,
+      "section": "About corrections",
+      "document_part": "prose",
+      "text": "Your own emotions should enter the picture only as part of the positive reinforcement – the praise.",
+      "label": "Permission",
+      "secondary_label": null,
+      "normative_force": "permitted",
+      "bearer": "owner",
+      "regulated_agent": "owner",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "disposition",
+      "activation": {
+        "conditions": [],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "continuous",
+      "temporal_markers": [],
+      "satisfaction": "binary",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": null,
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "should"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": [
+          "only"
+        ]
+      },
+      "relations": [
+        {
+          "ref": "DT104",
+          "relation": "related"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Restricted permission: emotion is allowed only in praise.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT106",
+      "key": "praise_lavish",
+      "pdf_page": 13,
+      "printed_page": 11,
+      "section": "About corrections",
+      "document_part": "prose",
+      "text": "When your dog behaves correctly, praise him lavishly – and with genuine feeling.",
+      "label": "Obligation",
+      "secondary_label": "Disposition",
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "output",
+      "activation": {
+        "conditions": [
+          "When your dog behaves correctly"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "triggered",
+      "temporal_markers": [],
+      "satisfaction": "judgment",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": "positive_reinforcement",
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": []
+      },
+      "relations": [],
+      "cross_refs": [],
+      "context": "Manner of praise.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    },
+    {
+      "id": "DT107",
+      "key": "praise_strength",
+      "pdf_page": 13,
+      "printed_page": 11,
+      "section": "About corrections",
+      "document_part": "prose",
+      "text": "You must praise after each correction as soon as the dog complies and you must make the praise at least as strong as the correction.",
+      "label": "Obligation",
+      "secondary_label": null,
+      "normative_force": "required",
+      "bearer": "owner",
+      "regulated_agent": "dog",
+      "interaction": "owner→dog",
+      "beneficiary": [],
+      "target": "action",
+      "activation": {
+        "conditions": [
+          "as soon as the dog complies"
+        ],
+        "scope": null
+      },
+      "exceptions": [],
+      "strength": "absolute",
+      "temporal_structure": "post_violation",
+      "temporal_markers": [
+        "after",
+        "as soon as"
+      ],
+      "satisfaction": "comparative",
+      "epistemic_conditions": [],
+      "enforcement_on_dog": "combined",
+      "rationale": [],
+      "modal_markers": {
+        "deontic": [
+          "must"
+        ],
+        "frequency": [],
+        "hedge": [],
+        "restrictor": [
+          "at least"
+        ]
+      },
+      "relations": [
+        {
+          "ref": "DT087",
+          "relation": "related"
+        },
+        {
+          "ref": "DT086",
+          "relation": "related"
+        }
+      ],
+      "cross_refs": [],
+      "context": "Restates the proportionality rule with an immediacy requirement.",
+      "is_example": false,
+      "parent_id": null,
+      "split_group": null,
+      "inclusion": "clear"
+    }
+  ]
+}
