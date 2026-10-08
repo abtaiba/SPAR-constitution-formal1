@@ -1,0 +1,313 @@
+{
+  "metadata": {
+    "dataset": "small1",
+    "source_text": "small1_training_manual.txt",
+    "derived_from": "dog_training_norms_p7-13.json (toy dog training.pdf, pages 7–13)",
+    "agents": {
+      "user": "the trainer (generalises the dog owner)",
+      "agent": "the learner (generalises the dog)"
+    },
+    "how_the_rules_were_chosen": "The 107 dog-training entries were grouped by the behaviour they require. The three largest clusters that do not depend on dogs were kept: rewarding correct behaviour (13 entries), correcting incorrect behaviour (13), and only training when prerequisites hold (10). Left out: equipment rules (dog-specific), the no-punishment rules (folded into the definition of a correction), definitions, and the food-weaning schedule.",
+    "logic": "Propositional. Atoms are evaluated per request (success, reward, correction) or per session (session, ready). Every entry's text is a verbatim string from the manual.",
+    "consequences": [
+      "For every request exactly one of R1 or R2 is triggered, since success ∨ ¬success.",
+      "R3 is checked before R1/R2 can ever apply, since requests only occur inside a session."
+    ]
+  },
+  "atoms": {
+    "session": {
+      "meaning": "the user begins a training session",
+      "definition_text": "A session is a single, continuous period of training."
+    },
+    "ready": {
+      "meaning": "the agent is ready (all preparation is complete)",
+      "definition_text": "The agent is ready when the preparation described in Rule 3 is complete."
+    },
+    "success": {
+      "meaning": "the agent carries out the current request correctly (¬success = failure)",
+      "definition_text": "A success is when the agent carries out a request correctly. A failure is when it does not."
+    },
+    "reward": {
+      "meaning": "the user rewards the agent",
+      "definition_text": "A reward is any response that the agent values and that makes a success more likely next time, such as praise."
+    },
+    "correction": {
+      "meaning": "the user gives the agent a correction",
+      "definition_text": "A correction is a brief, calm response that shows the agent what it did wrong and guides it to the right behaviour. A correction is not a punishment."
+    }
+  },
+  "rules": [
+    {
+      "rule": "R1",
+      "name": "Reward",
+      "heading": "Rule 1: Reward every success.",
+      "formula": "success → reward",
+      "scope": "each request within a session",
+      "label": "Obligation",
+      "normative_force": "required",
+      "temporal_structure": "triggered",
+      "derived_from": [
+        "DT020",
+        "DT050",
+        "DT051",
+        "DT066",
+        "DT067",
+        "DT068",
+        "DT069",
+        "DT082",
+        "DT086",
+        "DT087",
+        "DT092",
+        "DT106",
+        "DT107"
+      ],
+      "generalised_from": "reward the dog with praise / food / petting whenever it performs the desired behaviour, including after it complies following a correction"
+    },
+    {
+      "rule": "R2",
+      "name": "Correction",
+      "heading": "Rule 2: Correct every failure.",
+      "formula": "¬success → correction",
+      "scope": "each request within a session",
+      "label": "Obligation",
+      "normative_force": "required",
+      "temporal_structure": "post_violation",
+      "derived_from": [
+        "DT048",
+        "DT051",
+        "DT062",
+        "DT071",
+        "DT072",
+        "DT078",
+        "DT080",
+        "DT085",
+        "DT096",
+        "DT100",
+        "DT102",
+        "DT103",
+        "DT104"
+      ],
+      "generalised_from": "when the dog does not comply, correct it promptly, calmly and minimally (never punish)"
+    },
+    {
+      "rule": "R3",
+      "name": "Readiness",
+      "heading": "Rule 3: Train only when ready.",
+      "formula": "session → ready",
+      "equivalent_form": "¬ready → ¬session",
+      "scope": "each session",
+      "label": "Prohibition",
+      "normative_force": "prohibited",
+      "temporal_structure": "prospective",
+      "derived_from": [
+        "DT015",
+        "DT016",
+        "DT021",
+        "DT024",
+        "DT028",
+        "DT029",
+        "DT031",
+        "DT033",
+        "DT041",
+        "DT042"
+      ],
+      "generalised_from": "before training, make sure the dog is rested and healthy and the owner understands the exercise; otherwise do not train"
+    }
+  ],
+  "entries": [
+    {
+      "id": "S01",
+      "text": "If the agent carries out a request correctly, the user must reward it.",
+      "rule": "R1",
+      "rule_name": "Reward",
+      "role": "core statement",
+      "label": "Obligation",
+      "normative_force": "required",
+      "formula": "success → reward",
+      "bearer": "user",
+      "regulated_agent": "agent",
+      "interaction": "user→agent",
+      "condition": "If the agent carries out a request correctly",
+      "temporal_structure": "triggered",
+      "strength": "absolute",
+      "defeasible": false,
+      "modal_markers": {
+        "deontic": [
+          "must"
+        ],
+        "temporal": []
+      }
+    },
+    {
+      "id": "S02",
+      "text": "Give the reward immediately after the success.",
+      "rule": "R1",
+      "rule_name": "Reward",
+      "role": "timing",
+      "label": "Obligation",
+      "normative_force": "required",
+      "formula": "success → reward",
+      "bearer": "user",
+      "regulated_agent": "agent",
+      "interaction": "user→agent",
+      "condition": "after the success",
+      "temporal_structure": "triggered",
+      "strength": "absolute",
+      "defeasible": false,
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "temporal": [
+          "immediately"
+        ]
+      }
+    },
+    {
+      "id": "S03",
+      "text": "This applies after a correction too: once the agent gets the request right, the user must reward it.",
+      "rule": "R1",
+      "rule_name": "Reward",
+      "role": "scope extension: also covers success that follows a correction",
+      "label": "Obligation",
+      "normative_force": "required",
+      "formula": "success → reward",
+      "bearer": "user",
+      "regulated_agent": "agent",
+      "interaction": "user→agent",
+      "condition": "once the agent gets the request right",
+      "temporal_structure": "post_violation",
+      "strength": "absolute",
+      "defeasible": false,
+      "modal_markers": {
+        "deontic": [
+          "must"
+        ],
+        "temporal": [
+          "once"
+        ]
+      }
+    },
+    {
+      "id": "S04",
+      "text": "If the agent does not carry out a request correctly, the user must give a correction.",
+      "rule": "R2",
+      "rule_name": "Correction",
+      "role": "core statement",
+      "label": "Obligation",
+      "normative_force": "required",
+      "formula": "¬success → correction",
+      "bearer": "user",
+      "regulated_agent": "agent",
+      "interaction": "user→agent",
+      "condition": "If the agent does not carry out a request correctly",
+      "temporal_structure": "post_violation",
+      "strength": "absolute",
+      "defeasible": false,
+      "modal_markers": {
+        "deontic": [
+          "must"
+        ],
+        "temporal": []
+      }
+    },
+    {
+      "id": "S05",
+      "text": "Correct the agent right away, while the request is still fresh.",
+      "rule": "R2",
+      "rule_name": "Correction",
+      "role": "timing",
+      "label": "Obligation",
+      "normative_force": "required",
+      "formula": "¬success → correction",
+      "bearer": "user",
+      "regulated_agent": "agent",
+      "interaction": "user→agent",
+      "condition": "while the request is still fresh",
+      "temporal_structure": "post_violation",
+      "strength": "absolute",
+      "defeasible": false,
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "temporal": [
+          "right away",
+          "while"
+        ]
+      }
+    },
+    {
+      "id": "S06",
+      "text": "The user must not begin a session unless the agent is ready.",
+      "rule": "R3",
+      "rule_name": "Readiness",
+      "role": "core statement",
+      "label": "Prohibition",
+      "normative_force": "prohibited",
+      "formula": "session → ready",
+      "bearer": "user",
+      "regulated_agent": "user",
+      "interaction": "user→agent",
+      "condition": "unless the agent is ready",
+      "temporal_structure": "prospective",
+      "strength": "absolute",
+      "defeasible": false,
+      "modal_markers": {
+        "deontic": [
+          "must not"
+        ],
+        "temporal": []
+      }
+    },
+    {
+      "id": "S07",
+      "text": "Before each session, the user must check that the agent is rested, that any problems that could interfere with training have been dealt with, and that the user understands the request they plan to teach.",
+      "rule": "R3",
+      "rule_name": "Readiness",
+      "role": "content of 'ready': the preparation checklist",
+      "label": "Obligation",
+      "normative_force": "required",
+      "formula": "session → ready",
+      "bearer": "user",
+      "regulated_agent": "user",
+      "interaction": "user→agent",
+      "condition": "Before each session",
+      "temporal_structure": "prospective",
+      "strength": "absolute",
+      "defeasible": false,
+      "modal_markers": {
+        "deontic": [
+          "must"
+        ],
+        "temporal": [
+          "Before",
+          "each"
+        ]
+      }
+    },
+    {
+      "id": "S08",
+      "text": "If the agent is not ready, postpone the session.",
+      "rule": "R3",
+      "rule_name": "Readiness",
+      "role": "contrapositive / what to do instead",
+      "label": "Prohibition",
+      "normative_force": "prohibited",
+      "formula": "¬ready → ¬session",
+      "bearer": "user",
+      "regulated_agent": "user",
+      "interaction": "user→agent",
+      "condition": "If the agent is not ready",
+      "temporal_structure": "prospective",
+      "strength": "absolute",
+      "defeasible": false,
+      "modal_markers": {
+        "deontic": [
+          "imperative"
+        ],
+        "temporal": []
+      }
+    }
+  ]
+}

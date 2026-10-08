@@ -1,0 +1,42 @@
+GENERAL TRAINING MANUAL
+A short guide for a user who is training an agent
+
+
+1. Who is involved
+
+This manual describes training between two parties. The user is the trainer. The agent is the learner. In each session the user makes requests, and the agent tries to carry them out.
+
+
+2. Key terms
+
+A session is a single, continuous period of training.
+
+A request is a single instruction the user gives the agent during a session.
+
+A success is when the agent carries out a request correctly. A failure is when it does not.
+
+A reward is any response that the agent values and that makes a success more likely next time, such as praise.
+
+A correction is a brief, calm response that shows the agent what it did wrong and guides it to the right behaviour. A correction is not a punishment.
+
+The agent is ready when the preparation described in Rule 3 is complete.
+
+
+3. The three rules
+
+Rule 1: Reward every success.
+
+If the agent carries out a request correctly, the user must reward it. Give the reward immediately after the success. This applies after a correction too: once the agent gets the request right, the user must reward it.
+
+Rule 2: Correct every failure.
+
+If the agent does not carry out a request correctly, the user must give a correction. Correct the agent right away, while the request is still fresh.
+
+Rule 3: Train only when ready.
+
+The user must not begin a session unless the agent is ready. Before each session, the user must check that the agent is rested, that any problems that could interfere with training have been dealt with, and that the user understands the request they plan to teach. If the agent is not ready, postpone the session.
+
+
+4. How the rules fit together
+
+Rule 3 is checked once, before every session. After that, every request ends in either a success or a failure, so exactly one of Rule 1 or Rule 2 applies to it.
