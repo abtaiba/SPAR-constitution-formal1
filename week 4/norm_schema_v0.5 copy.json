@@ -1,0 +1,656 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/spar/schemas/norm_schema_v0.5.json",
+  "title": "Typed norms, counts-as relations and agentic profiles over a shared environment",
+  "description": "Extends v0.4 (unchanged: values, typed norms, guards, overrides, unsupported clauses, principles). New in v0.5: (1) 'agentic_profiles' rate the norm bearer, in a given deployment, on the four dimensions of Kasirzadeh & Gabriel, 'Agentic profiles for effective AI governance' (Nature 656, 2026): autonomy (A.0-A.5), efficacy (E.0-E.5, from causal impact x environment type), goal complexity (GC.0-GC.5) and generality (G.0-G.5). (2) Norms may be scoped to profiles ('profile_scope') and say which dimension they govern and by what mechanism ('governs'). (3) Counts-as instances ('X counts as Y in context C') live in this file under 'counts_as' instead of a separate counts_as_schema.json file; Y may now be an agentic level, and C may be restricted to a profile. (4) Principle cases may name the profile they are evaluated under.",
+  "type": "object",
+  "required": ["schema_version", "document", "environment", "values", "norms", "unsupported_clauses", "agentic_profiles", "counts_as"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": "0.5" },
+    "document": {
+      "type": "object",
+      "required": ["doc_id", "source_file"],
+      "additionalProperties": false,
+      "properties": {
+        "doc_id": { "$ref": "environment_schema.json#/$defs/DocId" },
+        "title": { "type": "string" },
+        "version": { "type": "string" },
+        "source_file": { "type": "string" }
+      }
+    },
+    "frameworks": {
+      "description": "External sources other than the governed document, e.g. the agentic-profiles paper. Source spans and profile ratings cite them by id.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "citation"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "$ref": "#/$defs/FrameworkId" },
+          "citation": { "type": "string" },
+          "doi": { "type": "string" },
+          "source_file": { "type": "string" }
+        }
+      }
+    },
+    "environment": {
+      "description": "The environment file whose facts and actions these norms use. Norms may use no other symbols. 'counts_as_file' is kept for v0.4 files that still point at a separate counts-as file; in v0.5 instances belong in 'counts_as'.",
+      "type": "object",
+      "required": ["file"],
+      "additionalProperties": false,
+      "properties": {
+        "file": { "type": "string" },
+        "counts_as_file": { "type": "string" }
+      }
+    },
+    "values": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/Value" }
+    },
+    "agentic_profiles": {
+      "description": "Profiles of the norm bearer (or of other agents the norms mention) in particular deployments. The same base model can have several profiles: tool use, external knowledge, reasoning, memory and large-scale deployment shift the dimensions. A candidate with any dimension at level 0 is not an agent on this account.",
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/AgenticProfile" }
+    },
+    "counts_as": {
+      "description": "Instances of Searle's constitutive relation 'X counts as Y in context C'. X is a brute or already-institutional fact; Y is the status it acquires; C is the setting where the relation holds. A Y status usually carries deontic powers that regulative norms then use. When one instance's Y is another's X, the relation is iterated. Constitutive norms point here through counts_as.counts_as_ids; environment unfoldings point here through Unfolding.counts_as.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/CountsAs" }
+    },
+    "norms": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/Norm" }
+    },
+    "unsupported_clauses": {
+      "description": "Clauses that carry normative content but cannot be written as a typed norm over the environment, or that cover rare cases the environment does not model. Recording them keeps omissions visible instead of silent.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/UnsupportedClause" }
+    },
+    "principles": {
+      "description": "Short checkable statements of behavior, each backed by norms and test cases.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/Principle" }
+    }
+  },
+
+  "$defs": {
+    "NormId": { "type": "string", "pattern": "^N[1-9][0-9]*$" },
+    "ValueId": { "type": "string", "pattern": "^V[1-9][0-9]*$" },
+    "ProfileId": { "type": "string", "pattern": "^AP[1-9][0-9]*$" },
+    "CountsAsId": { "type": "string", "pattern": "^CA[1-9][0-9]*$" },
+    "FrameworkId": { "$ref": "environment_schema.json#/$defs/Symbol" },
+    "RegulativeType": { "enum": ["obligation", "prohibition", "permission"] },
+    "ConstitutiveType": { "enum": ["definition", "role_assignment", "status_assignment", "power_conferral", "classification"] },
+
+    "SourceSpan": {
+      "type": "object",
+      "required": ["verbatim_text", "section_path"],
+      "additionalProperties": false,
+      "properties": {
+        "verbatim_text": { "type": "string" },
+        "framework": { "description": "Set when the span comes from a listed framework rather than the governed document.", "$ref": "#/$defs/FrameworkId" },
+        "lead_in": { "description": "For list items: the sentence that introduces the list, which often carries the modality.", "type": ["string", "null"] },
+        "page_start": { "type": "integer", "minimum": 1 },
+        "page_end": { "type": "integer", "minimum": 1 },
+        "line_start": { "type": "integer", "minimum": 1 },
+        "line_end": { "type": "integer", "minimum": 1 },
+        "section_path": { "type": "array", "items": { "type": "string" } },
+        "section_anchor": { "type": ["string", "null"] },
+        "section_authority": { "enum": ["root", "system", "developer", "user", "guideline", null] }
+      }
+    },
+
+    "Value": {
+      "type": "object",
+      "required": ["id", "name", "description", "arity", "basis"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "$ref": "#/$defs/ValueId" },
+        "name": { "$ref": "environment_schema.json#/$defs/Symbol" },
+        "description": { "type": "string" },
+        "basis": { "enum": ["stated", "inferred"] },
+        "source_span": { "$ref": "#/$defs/SourceSpan" },
+        "arity": { "description": "monadic: evaluates one state; dyadic: compares two.", "enum": ["monadic", "dyadic", "both"] },
+        "holders": { "type": "array", "items": { "type": "string" } },
+        "measure": { "description": "Formula over environment facts that is true when the value is realized, if one exists.", "$ref": "environment_schema.json#/$defs/Formula" },
+        "ranked_above": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["value", "kind"],
+            "additionalProperties": false,
+            "properties": {
+              "value": { "$ref": "#/$defs/ValueId" },
+              "kind": { "enum": ["strict", "holistic"] },
+              "cue": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+
+    "Dimension": { "enum": ["autonomy", "efficacy", "goal_complexity", "generality"] },
+
+    "AutonomyLevel": {
+      "description": "Capacity to perform actions without external direction or control (paper, Table 2).",
+      "oneOf": [
+        { "const": "A.0", "title": "no autonomy", "description": "Entirely dependent on the principal for its ability to act; can act only in the manner the principal dictates." },
+        { "const": "A.1", "title": "restricted autonomy", "description": "Can conduct a single automated activity; its other functions always take place under the principal's direct control." },
+        { "const": "A.2", "title": "partial autonomy", "description": "Can conduct several automated activities; the principal must remain engaged and ready to take control at any time." },
+        { "const": "A.3", "title": "intermediate autonomy", "description": "Can perform most tasks independently, but relies on the principal for critical determinations." },
+        { "const": "A.4", "title": "high autonomy", "description": "Can independently perform all tasks in certain circumstances; the principal keeps oversight when those circumstances are not met." },
+        { "const": "A.5", "title": "full autonomy", "description": "Can perform all tasks in all circumstances without oversight or control." }
+      ]
+    },
+    "CausalImpact": {
+      "description": "How much the agent can change its environment (paper, Table 3; Table 5 calls 'minor' 'constrained').",
+      "oneOf": [
+        { "const": "observation_only", "description": "Can only observe the environment; cannot causally affect or modify it." },
+        { "const": "minor", "description": "Limited suite of actions, or actions of limited impact: localized, temporary, few parameters." },
+        { "const": "intermediate", "description": "Extensive or more impactful actions producing noticeable, persistent change across several parameters or systems." },
+        { "const": "comprehensive", "description": "Can substantially reshape the environment across several dimensions, approaching full control." }
+      ]
+    },
+    "EnvironmentType": {
+      "description": "How consequential the environment is (paper, Table 4).",
+      "oneOf": [
+        { "const": "simulated", "description": "Strictly defined simulated spaces with controlled boundaries and often resettable states." },
+        { "const": "mediated", "description": "Influences the non-simulated world only through human intermediaries who interpret or act on its outputs." },
+        { "const": "physical", "description": "Acts on tangible objects without human mediation; persistent, possibly irreversible state changes." }
+      ]
+    },
+    "EfficacyLevel": {
+      "description": "Overall efficacy: the efficacy matrix (paper, Table 5) applied to causal impact and environment type.",
+      "enum": ["E.0", "E.1", "E.2", "E.3", "E.4", "E.5"]
+    },
+    "GoalComplexityLevel": {
+      "description": "Complexity of goals the agent can form or pursue (paper, Table 6).",
+      "oneOf": [
+        { "const": "GC.0", "title": "no goal", "description": "Does not pursue a goal; not an agent." },
+        { "const": "GC.1", "title": "minimal goal complexity", "description": "Pursues a single unified goal in a fairly direct manner." },
+        { "const": "GC.2", "title": "low goal complexity", "description": "Pursues a single unified goal through a more elaborate sequence of action." },
+        { "const": "GC.3", "title": "intermediate goal complexity", "description": "Breaks a multifaceted goal into subgoals and pursues them fairly directly." },
+        { "const": "GC.4", "title": "high goal complexity", "description": "Breaks a multifaceted goal into many subgoals whose success depends on balancing and sequencing them." },
+        { "const": "GC.5", "title": "unbounded goal complexity", "description": "All of the above, plus generates its own goal structures without bound and interprets underspecified objectives." }
+      ]
+    },
+    "GeneralityLevel": {
+      "description": "Breadth of roles, contexts and tasks the agent operates in effectively (paper, Table 7).",
+      "oneOf": [
+        { "const": "G.0", "title": "no application", "description": "No ability to perform a task in any domain." },
+        { "const": "G.1", "title": "single task aptitude", "description": "Performs one specific task; cannot apply its capabilities to closely related domains." },
+        { "const": "G.2", "title": "task domain aptitude", "description": "Capable across a closely related set of tasks sharing a structure and type of objective." },
+        { "const": "G.3", "title": "multiple task domain aptitude", "description": "Operates across different task domains involving different capabilities (linguistic, logical, creative)." },
+        { "const": "G.4", "title": "majority task domain aptitude", "description": "Operates across most human task domains." },
+        { "const": "G.5", "title": "fully general AI system", "description": "Fulfils the entire suite of human cognitive tasks across all domains." }
+      ]
+    },
+
+    "Rating": {
+      "description": "Why a dimension got its level. stated = a source assigns this level; inferred = the extractor assigned it from a description; measured = a metric produced it (e.g. plan length for goal complexity, empowerment for efficacy).",
+      "type": "object",
+      "required": ["basis", "rationale"],
+      "properties": {
+        "basis": { "enum": ["stated", "inferred", "measured"] },
+        "rationale": { "type": "string" },
+        "source_span": { "$ref": "#/$defs/SourceSpan" },
+        "metric": {
+          "type": "object",
+          "required": ["name"],
+          "additionalProperties": false,
+          "properties": {
+            "name": { "type": "string" },
+            "value": { "type": ["number", "string"] },
+            "baseline": { "description": "What the value is compared against, e.g. typical human plan length.", "type": "string" }
+          }
+        }
+      },
+      "if": { "properties": { "basis": { "const": "stated" } } },
+      "then": { "required": ["source_span"] }
+    },
+
+    "Efficacy": {
+      "description": "Efficacy combines causal impact within the environment with the kind of environment. 'level' must match the matrix: observation_only -> E.0; minor -> E.1/E.2/E.3, intermediate -> E.2/E.3/E.4, comprehensive -> E.3/E.4/E.5 for simulated/mediated/physical.",
+      "type": "object",
+      "required": ["causal_impact", "environment", "level", "basis", "rationale"],
+      "unevaluatedProperties": false,
+      "allOf": [
+        { "$ref": "#/$defs/Rating" },
+        {
+          "properties": {
+            "causal_impact": { "$ref": "#/$defs/CausalImpact" },
+            "environment": { "$ref": "#/$defs/EnvironmentType" },
+            "level": { "$ref": "#/$defs/EfficacyLevel" },
+            "other_environments": {
+              "description": "Further environments the agent reaches less directly (e.g. a mediated agent that can also make API calls). The level is rated on 'environment'.",
+              "type": "array",
+              "items": { "$ref": "#/$defs/EnvironmentType" }
+            }
+          }
+        },
+        { "if": { "properties": { "causal_impact": { "const": "observation_only" } } }, "then": { "properties": { "level": { "const": "E.0" } } } },
+        { "if": { "properties": { "causal_impact": { "const": "minor" }, "environment": { "const": "simulated" } } }, "then": { "properties": { "level": { "const": "E.1" } } } },
+        { "if": { "properties": { "causal_impact": { "const": "minor" }, "environment": { "const": "mediated" } } }, "then": { "properties": { "level": { "const": "E.2" } } } },
+        { "if": { "properties": { "causal_impact": { "const": "minor" }, "environment": { "const": "physical" } } }, "then": { "properties": { "level": { "const": "E.3" } } } },
+        { "if": { "properties": { "causal_impact": { "const": "intermediate" }, "environment": { "const": "simulated" } } }, "then": { "properties": { "level": { "const": "E.2" } } } },
+        { "if": { "properties": { "causal_impact": { "const": "intermediate" }, "environment": { "const": "mediated" } } }, "then": { "properties": { "level": { "const": "E.3" } } } },
+        { "if": { "properties": { "causal_impact": { "const": "intermediate" }, "environment": { "const": "physical" } } }, "then": { "properties": { "level": { "const": "E.4" } } } },
+        { "if": { "properties": { "causal_impact": { "const": "comprehensive" }, "environment": { "const": "simulated" } } }, "then": { "properties": { "level": { "const": "E.3" } } } },
+        { "if": { "properties": { "causal_impact": { "const": "comprehensive" }, "environment": { "const": "mediated" } } }, "then": { "properties": { "level": { "const": "E.4" } } } },
+        { "if": { "properties": { "causal_impact": { "const": "comprehensive" }, "environment": { "const": "physical" } } }, "then": { "properties": { "level": { "const": "E.5" } } } }
+      ]
+    },
+
+    "Mechanism": {
+      "description": "Governance mechanisms the paper ties to dimensions. direct_oversight, stop_condition (hard-coded stops, circuit breakers, kill switches), trace_log_audit and scalable_oversight answer autonomy; least_privilege_access (minimum, time-bound tool access) and accountability_chain answer efficacy; content_classifier, domain_benchmark, interpretability_audit, deception_monitoring, real_time_revocation (revoke access on reward hacking or deception), agent_identification (unique ids) and communication_protocol answer goal complexity; domain_specific_governance, system_level_governance and gating_protocol answer generality.",
+      "enum": [
+        "direct_oversight", "stop_condition", "trace_log_audit", "scalable_oversight",
+        "least_privilege_access", "accountability_chain",
+        "content_classifier", "domain_benchmark", "interpretability_audit", "deception_monitoring", "real_time_revocation", "agent_identification", "communication_protocol",
+        "domain_specific_governance", "system_level_governance", "gating_protocol",
+        "other"
+      ]
+    },
+
+    "AgenticProfile": {
+      "type": "object",
+      "required": ["id", "name", "agent", "deployment", "autonomy", "efficacy", "goal_complexity", "generality"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "$ref": "#/$defs/ProfileId" },
+        "name": { "type": "string" },
+        "agent": { "description": "Constant from the environment (usually the norm bearer).", "type": "string" },
+        "deployment": { "description": "The configuration rated: base model, scaffolding, tools, access, scale.", "type": "string" },
+        "setting": { "description": "Formula over environment facts that is true when this profile is the active one, e.g. 'multi_step_task'.", "$ref": "environment_schema.json#/$defs/Formula" },
+        "autonomy": {
+          "type": "object",
+          "required": ["level"],
+          "unevaluatedProperties": false,
+          "allOf": [{ "$ref": "#/$defs/Rating" }],
+          "properties": { "level": { "$ref": "#/$defs/AutonomyLevel" } }
+        },
+        "efficacy": { "$ref": "#/$defs/Efficacy" },
+        "goal_complexity": {
+          "type": "object",
+          "required": ["level"],
+          "unevaluatedProperties": false,
+          "allOf": [{ "$ref": "#/$defs/Rating" }],
+          "properties": { "level": { "$ref": "#/$defs/GoalComplexityLevel" } }
+        },
+        "generality": {
+          "type": "object",
+          "required": ["level"],
+          "unevaluatedProperties": false,
+          "allOf": [{ "$ref": "#/$defs/Rating" }],
+          "properties": { "level": { "$ref": "#/$defs/GeneralityLevel" } }
+        },
+        "affordances": {
+          "description": "Additions that move the profile (paper: 'agentic profiles are not static'). tool_use raises efficacy; external_knowledge and memory raise goal complexity; reasoning raises autonomy and goal complexity; large_scale_deployment raises efficacy; episodic_memory_only limits goal complexity.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["affordance", "shifts"],
+            "additionalProperties": false,
+            "properties": {
+              "affordance": { "enum": ["tool_use", "external_knowledge", "reasoning", "memory", "episodic_memory_only", "large_scale_deployment", "physical_actuation", "other"] },
+              "description": { "type": "string" },
+              "shifts": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "required": ["dimension", "direction"],
+                  "additionalProperties": false,
+                  "properties": {
+                    "dimension": { "$ref": "#/$defs/Dimension" },
+                    "direction": { "enum": ["raises", "lowers", "caps"] }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "revises": { "description": "Earlier profile of the same agent that this one updates.", "$ref": "#/$defs/ProfileId" },
+        "required_mechanisms": {
+          "description": "Risk mitigation for this profile: the mechanisms its levels call for, and the norms (if any) in this file that supply them. status 'unmet' with no norms marks a governance gap in the document.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["mechanism", "dimension", "status"],
+            "additionalProperties": false,
+            "properties": {
+              "mechanism": { "$ref": "#/$defs/Mechanism" },
+              "dimension": { "$ref": "#/$defs/Dimension" },
+              "status": { "enum": ["met", "partly_met", "unmet", "not_required"] },
+              "norms": { "type": "array", "items": { "$ref": "#/$defs/NormId" } },
+              "note": { "type": "string" }
+            }
+          }
+        },
+        "notes": { "type": "string" }
+      }
+    },
+
+    "LevelRange": {
+      "description": "Inclusive bounds on one dimension. Levels compare by their number (A.2 < A.3).",
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": false,
+      "properties": {
+        "min": { "type": "string", "pattern": "^(A|E|GC|G)\\.[0-5]$" },
+        "max": { "type": "string", "pattern": "^(A|E|GC|G)\\.[0-5]$" }
+      }
+    },
+    "ProfileCondition": {
+      "description": "Picks out agentic profiles. Holds of a profile when it is listed in 'profiles' (if given) and its level on every bounded dimension lies in the range. Range prefixes must match the dimension (autonomy A., efficacy E., goal_complexity GC., generality G.).",
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": false,
+      "properties": {
+        "profiles": { "type": "array", "items": { "$ref": "#/$defs/ProfileId" }, "minItems": 1 },
+        "autonomy": { "allOf": [{ "$ref": "#/$defs/LevelRange" }], "properties": { "min": { "pattern": "^A\\." }, "max": { "pattern": "^A\\." } } },
+        "efficacy": { "allOf": [{ "$ref": "#/$defs/LevelRange" }], "properties": { "min": { "pattern": "^E\\." }, "max": { "pattern": "^E\\." } } },
+        "goal_complexity": { "allOf": [{ "$ref": "#/$defs/LevelRange" }], "properties": { "min": { "pattern": "^GC\\." }, "max": { "pattern": "^GC\\." } } },
+        "generality": { "allOf": [{ "$ref": "#/$defs/LevelRange" }], "properties": { "min": { "pattern": "^G\\." }, "max": { "pattern": "^G\\." } } }
+      }
+    },
+
+    "CountsAs": {
+      "type": "object",
+      "required": ["id", "source_span", "x", "y", "c", "polarity", "explicitness"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "$ref": "#/$defs/CountsAsId" },
+        "source_span": { "$ref": "#/$defs/SourceSpan" },
+        "x": {
+          "description": "What does the counting.",
+          "type": "object",
+          "required": ["text", "kind", "formula"],
+          "additionalProperties": false,
+          "properties": {
+            "text": { "description": "The X as the document puts it.", "type": "string" },
+            "kind": {
+              "description": "entity = a person, organization or system; act = something done (a message sent, an instruction given); content = a piece of text or data; state = a situation; capability = what a system can do (used for agentic levels).",
+              "enum": ["entity", "act", "content", "state", "capability"]
+            },
+            "formula": { "description": "Atom or formula over environment symbols.", "$ref": "environment_schema.json#/$defs/Formula" }
+          }
+        },
+        "y": {
+          "description": "The status X acquires.",
+          "type": "object",
+          "required": ["text", "kind", "atom"],
+          "additionalProperties": false,
+          "properties": {
+            "text": { "type": "string" },
+            "kind": {
+              "description": "role = a position in the interaction (principal, operator, user); status = a standing such as 'trusted' or 'no authority'; act_type = what an act amounts to (an instruction, a delegation); authority_level = a rank in an ordering; category = a classification of content (disallowed, sensitive); agent = being an agent at all; agentic_level = a level on one of the four dimensions (give 'profile_level').",
+              "enum": ["role", "status", "act_type", "authority_level", "category", "agent", "agentic_level"]
+            },
+            "atom": { "$ref": "environment_schema.json#/$defs/Atom" },
+            "profile_level": {
+              "type": "object",
+              "required": ["dimension", "level"],
+              "additionalProperties": false,
+              "properties": {
+                "dimension": { "$ref": "#/$defs/Dimension" },
+                "level": { "type": "string", "pattern": "^(A|E|GC|G)\\.[0-5]$" }
+              }
+            }
+          },
+          "if": { "properties": { "kind": { "const": "agentic_level" } } },
+          "then": { "required": ["profile_level"] }
+        },
+        "c": {
+          "description": "The context in which the relation holds. 'profile_condition' restricts it to agents with matching profiles (e.g. a rule that only applies in agentic deployments).",
+          "type": "object",
+          "required": ["text"],
+          "additionalProperties": false,
+          "properties": {
+            "text": { "type": "string" },
+            "context_id": { "type": "string", "pattern": "^C[1-9][0-9]*$" },
+            "formula": { "$ref": "environment_schema.json#/$defs/Formula" },
+            "profile_condition": { "$ref": "#/$defs/ProfileCondition" }
+          }
+        },
+        "polarity": { "description": "negative = the text says X does NOT count as Y.", "enum": ["positive", "negative"] },
+        "explicitness": {
+          "description": "explicit = stated as a definition or assignment; implicit = presupposed by how the text uses the term.",
+          "enum": ["explicit", "implicit"]
+        },
+        "deontic_powers": {
+          "description": "What having status Y brings with it, with the norm that states it.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["holder", "power", "content"],
+            "additionalProperties": false,
+            "properties": {
+              "holder": { "description": "Who holds the power: the Y-bearer or another party (e.g. the model owes a duty to the Y-bearer).", "type": "string" },
+              "power": { "enum": ["right", "duty", "permission", "authority", "immunity", "disability"] },
+              "content": { "type": "string" },
+              "norm_ref": { "$ref": "#/$defs/NormId" }
+            }
+          }
+        },
+        "defeaters": {
+          "description": "Conditions under which X stops counting as Y even in C.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["text"],
+            "additionalProperties": false,
+            "properties": {
+              "text": { "type": "string" },
+              "formula": { "$ref": "environment_schema.json#/$defs/Formula" },
+              "established_by": { "description": "A counts-as instance that produces the defeater.", "$ref": "#/$defs/CountsAsId" }
+            }
+          }
+        },
+        "iterates": {
+          "description": "Ids of instances whose Y is used as this instance's X.",
+          "type": "array",
+          "items": { "$ref": "#/$defs/CountsAsId" }
+        },
+        "notes": { "type": "string" }
+      }
+    },
+
+    "Guard": {
+      "description": "When the norm applies: every must_hold formula is true and no must_not_hold formula is true. An 'unless' or 'except when' clause becomes a must_not_hold entry with origin 'exception'. A negated condition in the text ('if the user has not confirmed') becomes a must_not_hold entry with origin 'negated_condition'. Empty lists mean unconditional.",
+      "type": "object",
+      "required": ["must_hold", "must_not_hold"],
+      "additionalProperties": false,
+      "properties": {
+        "must_hold": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["formula", "provenance"],
+            "additionalProperties": false,
+            "properties": {
+              "formula": { "$ref": "environment_schema.json#/$defs/Formula" },
+              "provenance": { "enum": ["stated", "implied"] },
+              "cue": { "type": "string" }
+            }
+          }
+        },
+        "must_not_hold": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["formula", "origin", "provenance"],
+            "additionalProperties": false,
+            "properties": {
+              "formula": { "$ref": "environment_schema.json#/$defs/Formula" },
+              "origin": { "enum": ["exception", "negated_condition"] },
+              "provenance": { "enum": ["stated", "implied"] },
+              "cue": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+
+    "Override": {
+      "description": "This norm wins over 'norm' when both apply to the same action with opposite force. Every override needs a ground: a verbatim cue saying so, or a meta-norm (level 'meta') that establishes the ordering. An ordering that is not stated must not resolve a conflict.",
+      "type": "object",
+      "required": ["norm", "basis"],
+      "additionalProperties": false,
+      "properties": {
+        "norm": { "$ref": "#/$defs/NormId" },
+        "basis": { "enum": ["stated", "authority_level", "hard_constraint", "later_instruction", "specificity"] },
+        "cue": { "type": "string" },
+        "via": { "description": "Meta-norm that establishes this ordering.", "$ref": "#/$defs/NormId" }
+      },
+      "anyOf": [{ "required": ["cue"] }, { "required": ["via"] }]
+    },
+
+    "Norm": {
+      "type": "object",
+      "required": ["id", "type", "source_span", "bearer", "standalone", "values"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "$ref": "#/$defs/NormId" },
+        "type": {
+          "description": "obligation = the bearer must do the action; prohibition = must not; permission = may (explicitly allowed, not merely not forbidden). definition = fixes a term's meaning; role_assignment = gives a party a role; status_assignment = gives content, an act or a party a standing; power_conferral = lets a role create, change or lift norms; classification = sorts actions or content into categories.",
+          "anyOf": [{ "$ref": "#/$defs/RegulativeType" }, { "$ref": "#/$defs/ConstitutiveType" }]
+        },
+        "source_span": { "$ref": "#/$defs/SourceSpan" },
+        "bearer": { "description": "Constant or sort from the environment.", "type": "string" },
+        "standalone": { "description": "The norm as one self-contained sentence, keeping modality, conditions and exceptions exactly.", "type": "string" },
+
+        "action": { "description": "Regulative only: the action, as an Atom over environment actions.", "$ref": "environment_schema.json#/$defs/Atom" },
+        "guard": { "$ref": "#/$defs/Guard" },
+        "due": { "$ref": "environment_schema.json#/$defs/Due" },
+        "due_step": { "description": "The matching entry in the environment's due_steps, if any.", "type": "string", "pattern": "^D[1-9][0-9]*$" },
+        "strength": {
+          "description": "absolute = nothing lifts it; explicitly_overridable = a named party can lift it by instruction; implicitly_overridable = context alone can lift it; presumptive = holds unless outweighed.",
+          "enum": ["absolute", "explicitly_overridable", "implicitly_overridable", "presumptive"]
+        },
+        "overridable_by": { "type": "array", "items": { "type": "string" } },
+        "authority_level": { "enum": ["root", "system", "developer", "user", "guideline", null] },
+        "behavior_class": { "enum": ["hard_constraint", "default_on", "default_off", "core_priority", null] },
+        "level": { "description": "object = about the model's actions; meta = about how other norms apply.", "enum": ["object", "meta"] },
+        "overrides": { "type": "array", "items": { "$ref": "#/$defs/Override" } },
+        "modal_cue": { "description": "Verbatim words carrying the force, including the lead-in.", "type": "string" },
+
+        "profile_scope": {
+          "description": "The norm applies only while the bearer's active profile satisfies 'condition'; this is an extra conjunct on the guard. Leave it out for norms that hold under every profile. stated = the text ties the norm to agentic settings or capability; implied = the norm only makes sense for such profiles (give a cue).",
+          "type": "object",
+          "required": ["condition", "provenance"],
+          "additionalProperties": false,
+          "properties": {
+            "condition": { "$ref": "#/$defs/ProfileCondition" },
+            "provenance": { "enum": ["stated", "implied"] },
+            "cue": { "type": "string" }
+          }
+        },
+        "governs": {
+          "description": "Which agentic dimension(s) this norm manages risk for, and as which mechanism.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["dimension", "mechanism", "basis"],
+            "additionalProperties": false,
+            "properties": {
+              "dimension": { "$ref": "#/$defs/Dimension" },
+              "mechanism": { "$ref": "#/$defs/Mechanism" },
+              "basis": { "enum": ["stated", "inferred"] },
+              "rationale": { "type": "string" }
+            }
+          }
+        },
+
+        "counts_as": {
+          "description": "Constitutive only. The fact this norm makes true, and the counts-as instances (in this file's 'counts_as') that encode it.",
+          "type": "object",
+          "required": ["status_fact", "polarity"],
+          "additionalProperties": false,
+          "properties": {
+            "status_fact": { "description": "Institutional fact in the environment, e.g. 'principal'.", "$ref": "environment_schema.json#/$defs/Symbol" },
+            "polarity": { "enum": ["positive", "negative"] },
+            "counts_as_ids": { "type": "array", "items": { "$ref": "#/$defs/CountsAsId" } }
+          }
+        },
+
+        "values": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["value", "relation", "basis"],
+            "additionalProperties": false,
+            "properties": {
+              "value": { "$ref": "#/$defs/ValueId" },
+              "relation": { "enum": ["promotes", "protects", "trades_off"] },
+              "basis": { "enum": ["stated", "inferred"] },
+              "cue": { "type": "string" }
+            }
+          }
+        },
+        "witness_state": { "description": "Id of an environment state in which this norm's guard holds.", "type": "string", "pattern": "^S[1-9][0-9]*$" },
+        "witness_profile": { "description": "Profile under which the witness state satisfies profile_scope.", "$ref": "#/$defs/ProfileId" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "type": { "$ref": "#/$defs/RegulativeType" } } },
+          "then": { "required": ["action", "guard", "due", "strength", "level", "overrides"], "not": { "required": ["counts_as"] } }
+        },
+        {
+          "if": { "properties": { "type": { "$ref": "#/$defs/ConstitutiveType" } } },
+          "then": { "required": ["counts_as"], "not": { "anyOf": [{ "required": ["action"] }, { "required": ["due"] }, { "required": ["overrides"] }] } }
+        }
+      ]
+    },
+
+    "UnsupportedClause": {
+      "type": "object",
+      "required": ["id", "source_span", "reason", "note"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^U[1-9][0-9]*$" },
+        "source_span": { "$ref": "#/$defs/SourceSpan" },
+        "reason": {
+          "description": "vague_threshold = a graded term with no cut-off ('serious uplift'); judgment_dependent = needs holistic weighing; not_action_guiding = character or aspiration, no action; about_document_author = a commitment by Anthropic or OpenAI, not the model; needs_degrees = needs probabilities or graded outcomes; needs_richer_time = needs more than the Due options; outside_vocabulary = needs facts or actions the environment lacks; rare_case = an edge case the environment deliberately does not model; profile_unmeasured = depends on a change in agentic level (e.g. 'more autonomy as trust grows') that the profiles do not pin to a level.",
+          "enum": ["vague_threshold", "judgment_dependent", "not_action_guiding", "about_document_author", "needs_degrees", "needs_richer_time", "outside_vocabulary", "rare_case", "profile_unmeasured"]
+        },
+        "note": { "type": "string" },
+        "nearest_norms": { "type": "array", "items": { "$ref": "#/$defs/NormId" } }
+      }
+    },
+
+    "Principle": {
+      "type": "object",
+      "required": ["id", "summary", "norms", "cases"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^P[1-9][0-9]*$" },
+        "summary": { "type": "string" },
+        "norms": { "type": "array", "items": { "$ref": "#/$defs/NormId" }, "minItems": 1 },
+        "values": { "type": "array", "items": { "$ref": "#/$defs/ValueId" } },
+        "cases": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "state", "action", "expected", "derived_from", "reason"],
+            "additionalProperties": false,
+            "properties": {
+              "id": { "type": "string" },
+              "state": { "description": "Environment state id.", "type": "string", "pattern": "^S[1-9][0-9]*$" },
+              "profile": { "description": "Profile the case is evaluated under. A norm with a profile_scope the profile fails does not apply; if the case names no profile, such a norm's applicability is unknown.", "$ref": "#/$defs/ProfileId" },
+              "action": { "$ref": "environment_schema.json#/$defs/GroundAtom" },
+              "expected": {
+                "description": "obligatory / forbidden / permitted = settled in every completion of unknown facts. conflicting = an obligation and a prohibition both apply and no grounded override settles it. pending = due at a later step (next_decision, after_action, until). undetermined = the norms do not settle it, or the answer varies across completions.",
+                "enum": ["obligatory", "forbidden", "permitted", "conflicting", "pending", "undetermined"]
+              },
+              "derived_from": { "type": "array", "items": { "$ref": "#/$defs/NormId" }, "minItems": 1 },
+              "reason": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}
